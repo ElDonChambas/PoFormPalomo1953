@@ -9,7 +9,7 @@ export class GoogleSheetsService {
   private http = inject(HttpClient);
   
   // Tu URL de Google Apps Script (¡Asegúrate de que sea la correcta!)
-  private scriptUrl = 'https://script.google.com/macros/s/AKfycbyLLk9ParJ875vAHF1I7cZQ4X5ehx5JPghfKEYs7Fwzwv-nPQoxb_MsReLl70pWScDo/exec'; 
+  private scriptUrl = 'https://script.google.com/macros/s/AKfycby5KqnfH8vqhKtyYjaTPFdkxpfik-OOdjDaUShNHnQ_flVygJinUsfZi6exUDjxELk2/exec'; 
 
   submitPO(customer: CustomerInfo, products: Product[]) {
     const payload = { customer, products };

@@ -2,7 +2,7 @@ import { Component, inject, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { GoogleSheetsService } from '../../2-services/google-sheets.service';
-import { ProductCategory, ProductVariant, CustomerInfo, Product, SizeOption } from '../../1-models/po.interface';
+import { ProductCategory, ProductVariant, CustomerInfo, Product, SizeOption, ProductStyle } from '../../1-models/po.interface';
 
 @Component({
   selector: 'app-po-form',
@@ -24,6 +24,9 @@ export class PoFormComponent {
   selectedImage: string | null = null; 
   isSummaryOpen = false; 
 
+  isModalOpen = false;
+  modalData: { categoryName: string, style: ProductStyle | null, currentIndex: number } = { categoryName: '', style: null, currentIndex: 0 };
+
   activeVariantIndices: { [styleName: string]: number } = {};
 
   customer: CustomerInfo = {
@@ -39,103 +42,103 @@ export class PoFormComponent {
           styleName: 'Edmund Plain Toe Boot',
           price: 140,
           variants: [
-            { id: 'gold-edmund-black', colorName: 'Black', hexColor: '#1D1D1D', imageUrl: '/productos/gold-edmund/gold-edmund-black.jpg', sizes: this.generateSizes() },
-            { id: 'gold-edmund-brown', colorName: 'Brown', hexColor: '#4D3B37', imageUrl: '/productos/gold-edmund/gold-edmund-brown.jpg', sizes: this.generateSizes() },
-            { id: 'gold-edmund-whiskey', colorName: 'Whiskey', hexColor: '#70554A', imageUrl: '/productos/gold-edmund/gold-edmund-whiskey.jpg', sizes: this.generateSizes() },
-            { id: 'gold-edmund-cola', colorName: 'Cola', hexColor: '#6B4424', imageUrl: '/productos/gold-edmund/gold-edmund-cola.jpg', sizes: this.generateSizes(), isSuede: true },
-            { id: 'gold-edmund-polo', colorName: 'Polo', hexColor: '#4D2E21', imageUrl: '/productos/gold-edmund/gold-edmund-polo.jpg', sizes: this.generateSizes(), isSuede: true }
+            { id: 'gold-edmund-black', colorName: 'Black', hexColor: '#1D1D1D', imageUrl: '/productos/gold-edmund/gold-edmund-black.webp', sizes: this.generateSizes() },
+            { id: 'gold-edmund-brown', colorName: 'Brown', hexColor: '#4D3B37', imageUrl: '/productos/gold-edmund/gold-edmund-brown.webp', sizes: this.generateSizes() },
+            { id: 'gold-edmund-whiskey', colorName: 'Whiskey', hexColor: '#70554A', imageUrl: '/productos/gold-edmund/gold-edmund-whiskey.webp', sizes: this.generateSizes() },
+            { id: 'gold-edmund-cola', colorName: 'Cola', hexColor: '#6B4424', imageUrl: '/productos/gold-edmund/gold-edmund-cola.webp', sizes: this.generateSizes(), isSuede: true },
+            { id: 'gold-edmund-polo', colorName: 'Polo', hexColor: '#4D2E21', imageUrl: '/productos/gold-edmund/gold-edmund-polo.webp', sizes: this.generateSizes(), isSuede: true }
           ]
         }, 
         {
           styleName: 'Ernest Cap Toe Boot',
           price: 140,
           variants: [
-            { id: 'gold-ernest-black', colorName: 'Black', hexColor: '#1D1D1D', imageUrl: '/productos/gold-ernest/gold-ernest-black.jpg', sizes: this.generateSizes() },
-            { id: 'gold-ernest-brown', colorName: 'Brown', hexColor: '#4D3B37', imageUrl: '/productos/gold-ernest/gold-ernest-brown.jpg', sizes: this.generateSizes() },
-            { id: 'gold-ernest-whiskey', colorName: 'Whiskey', hexColor: '#70554A', imageUrl: '/productos/gold-ernest/gold-ernest-whiskey.jpg', sizes: this.generateSizes() },
-            { id: 'gold-ernest-cola', colorName: 'Cola', hexColor: '#6B4424', imageUrl: '/productos/gold-ernest/gold-ernest-cola.jpg', sizes: this.generateSizes(), isSuede: true },
-            { id: 'gold-ernest-polo', colorName: 'Polo', hexColor: '#4D2E21', imageUrl: '/productos/gold-ernest/gold-ernest-polo.jpg', sizes: this.generateSizes(), isSuede: true }
+            { id: 'gold-ernest-black', colorName: 'Black', hexColor: '#1D1D1D', imageUrl: '/productos/gold-ernest/gold-ernest-black.webp', sizes: this.generateSizes() },
+            { id: 'gold-ernest-brown', colorName: 'Brown', hexColor: '#4D3B37', imageUrl: '/productos/gold-ernest/gold-ernest-brown.webp', sizes: this.generateSizes() },
+            { id: 'gold-ernest-whiskey', colorName: 'Whiskey', hexColor: '#70554A', imageUrl: '/productos/gold-ernest/gold-ernest-whiskey.webp', sizes: this.generateSizes() },
+            { id: 'gold-ernest-cola', colorName: 'Cola', hexColor: '#6B4424', imageUrl: '/productos/gold-ernest/gold-ernest-cola.webp', sizes: this.generateSizes(), isSuede: true },
+            { id: 'gold-ernest-polo', colorName: 'Polo', hexColor: '#4D2E21', imageUrl: '/productos/gold-ernest/gold-ernest-polo.webp', sizes: this.generateSizes(), isSuede: true }
           ]
         }, 
         {
           styleName: 'Sherman Chelsea Boot',
           price: 140,
           variants: [
-            { id: 'gold-chelsea-black', colorName: 'Black', hexColor: '#1D1D1D', imageUrl: '/productos/gold-sherman/gold-chelsea-Black.jpg', sizes: this.generateSizes() },
-            { id: 'gold-chelsea-brown', colorName: 'Brown', hexColor: '#4D3B37', imageUrl: '/productos/gold-sherman/gold-chelsea-brown.jpg', sizes: this.generateSizes() },
-            { id: 'gold-chelsea-whiskey', colorName: 'Whiskey', hexColor: '#70554A', imageUrl: '/productos/gold-sherman/gold-chelsea-Whiskey.jpg', sizes: this.generateSizes() },
-            { id: 'gold-chelsea-natural', colorName: 'Natural', hexColor: '#A1866B', imageUrl: '/productos/gold-sherman/gold-chelsea-Natural.jpg', sizes: this.generateSizes() },
-            { id: 'gold-chelsea-cola', colorName: 'Cola', hexColor: '#6B4424', imageUrl: '/productos/gold-sherman/gold-chelsea-Cola.jpg', sizes: this.generateSizes(), isSuede: true },
-            { id: 'gold-chelsea-polo', colorName: 'Polo', hexColor: '#4D2E21', imageUrl: '/productos/gold-sherman/gold-chelsea-Polo.jpg', sizes: this.generateSizes(), isSuede: true },
-            { id: 'gold-chelsea-visone', colorName: 'Visone', hexColor: '#887152', imageUrl: '/productos/gold-sherman/gold-chelsea-visone.jpg', sizes: this.generateSizes(), isSuede: true }
+            { id: 'gold-chelsea-black', colorName: 'Black', hexColor: '#1D1D1D', imageUrl: '/productos/gold-sherman/gold-chelsea-Black.webp', sizes: this.generateSizes() },
+            { id: 'gold-chelsea-brown', colorName: 'Brown', hexColor: '#4D3B37', imageUrl: '/productos/gold-sherman/gold-chelsea-brown.webp', sizes: this.generateSizes() },
+            { id: 'gold-chelsea-whiskey', colorName: 'Whiskey', hexColor: '#70554A', imageUrl: '/productos/gold-sherman/gold-chelsea-Whiskey.webp', sizes: this.generateSizes() },
+            { id: 'gold-chelsea-natural', colorName: 'Natural', hexColor: '#A1866B', imageUrl: '/productos/gold-sherman/gold-chelsea-Natural.webp', sizes: this.generateSizes() },
+            { id: 'gold-chelsea-cola', colorName: 'Cola', hexColor: '#6B4424', imageUrl: '/productos/gold-sherman/gold-chelsea-Cola.webp', sizes: this.generateSizes(), isSuede: true },
+            { id: 'gold-chelsea-polo', colorName: 'Polo', hexColor: '#4D2E21', imageUrl: '/productos/gold-sherman/gold-chelsea-Polo.webp', sizes: this.generateSizes(), isSuede: true },
+            { id: 'gold-chelsea-visone', colorName: 'Visone', hexColor: '#887152', imageUrl: '/productos/gold-sherman/gold-chelsea-visone.webp', sizes: this.generateSizes(), isSuede: true }
           ]
         },
         {
           styleName: 'Yukon Ranger Boot',
           price: 130,
           variants: [
-            { id: 'gold-yukon-black', colorName: 'Black', hexColor: '#1D1D1D', imageUrl: '/productos/gold-yukon/gold-yukon-black.jpg', sizes: this.generateSizes() },
-            { id: 'gold-yukon-whiskey', colorName: 'Whiskey', hexColor: '#70554A', imageUrl: '/productos/gold-yukon/gold-yukon-whiskey.jpg', sizes: this.generateSizes() },
-            { id: 'gold-yukon-cola', colorName: 'Cola', hexColor: '#6B4424', imageUrl: '/productos/gold-yukon/gold-yukon-cola.jpg', sizes: this.generateSizes(), isSuede: true },
+            { id: 'gold-yukon-black', colorName: 'Black', hexColor: '#1D1D1D', imageUrl: '/productos/gold-yukon/gold-yukon-black.webp', sizes: this.generateSizes() },
+            { id: 'gold-yukon-whiskey', colorName: 'Whiskey', hexColor: '#70554A', imageUrl: '/productos/gold-yukon/gold-yukon-whiskey.webp', sizes: this.generateSizes() },
+            { id: 'gold-yukon-cola', colorName: 'Cola', hexColor: '#6B4424', imageUrl: '/productos/gold-yukon/gold-yukon-cola.webp', sizes: this.generateSizes(), isSuede: true },
           ]
         },
         {
           styleName: 'Crescent Camp Bootie',
           price: 115,
           variants: [
-            { id: 'gold-crescent-natural', colorName: 'Natural', hexColor: '#A1866B', imageUrl: '/productos/gold-crescent/gold-crescent-natural.jpg', sizes: this.generateSizes() },
-            { id: 'gold-crescent-cola', colorName: 'Cola', hexColor: '#6B4424', imageUrl: '/productos/gold-crescent/gold-crescent-cola.jpg', sizes: this.generateSizes(), isSuede: true },
+            { id: 'gold-crescent-natural', colorName: 'Natural', hexColor: '#A1866B', imageUrl: '/productos/gold-crescent/gold-crescent-natural.webp', sizes: this.generateSizes() },
+            { id: 'gold-crescent-cola', colorName: 'Cola', hexColor: '#6B4424', imageUrl: '/productos/gold-crescent/gold-crescent-cola.webp', sizes: this.generateSizes(), isSuede: true },
           ]
         },
         {
           styleName: 'Vermont Camp Lug',
           price: 115,
           variants: [
-            { id: 'gold-vermont-natural', colorName: 'Natural', hexColor: '#A1866B', imageUrl: '/productos/gold-vermont/gold-vermont-natural.jpg', sizes: this.generateSizes() },
+            { id: 'gold-vermont-natural', colorName: 'Natural', hexColor: '#A1866B', imageUrl: '/productos/gold-vermont/gold-vermont-natural.webp', sizes: this.generateSizes() },
           ]
         },
         {
           styleName: 'Acadia Camp Moc',
           price: 95,
           variants: [
-            { id: 'gold-acadia-natural', colorName: 'Natural', hexColor: '#A1866B', imageUrl: '/productos/gold-acadia/gold-acadia-natural.jpg', sizes: this.generateSizes() },
-            { id: 'gold-acadia-cola', colorName: 'Cola', hexColor: '#6B4424', imageUrl: '/productos/gold-acadia/gold-acadia-cola.jpg', sizes: this.generateSizes(), isSuede: true },
+            { id: 'gold-acadia-natural', colorName: 'Natural', hexColor: '#A1866B', imageUrl: '/productos/gold-acadia/gold-acadia-natural.webp', sizes: this.generateSizes() },
+            { id: 'gold-acadia-cola', colorName: 'Cola', hexColor: '#6B4424', imageUrl: '/productos/gold-acadia/gold-acadia-cola.webp', sizes: this.generateSizes(), isSuede: true },
           ]
         },
         {
           styleName: 'Baxter Camp Moc',
           price: 100,
           variants: [
-            { id: 'gold-baxter-natural', colorName: 'Natural', hexColor: '#A1866B', imageUrl: '/productos/gold-baxter/gold-baxter-natural.jpg', sizes: this.generateSizes() },
-            { id: 'gold-baxter-cola', colorName: 'Cola', hexColor: '#6B4424', imageUrl: '/productos/gold-baxter/gold-baxter-cola.jpg', sizes: this.generateSizes(), isSuede: true },
+            { id: 'gold-baxter-natural', colorName: 'Natural', hexColor: '#A1866B', imageUrl: '/productos/gold-baxter/gold-baxter-natural.webp', sizes: this.generateSizes() },
+            { id: 'gold-baxter-cola', colorName: 'Cola', hexColor: '#6B4424', imageUrl: '/productos/gold-baxter/gold-baxter-cola.webp', sizes: this.generateSizes(), isSuede: true },
           ]
         },
         {
           styleName: 'PALOMO® Loafer',
           price: 90,
           variants: [
-            { id: 'gold-penny-black', colorName: 'Black', hexColor: '#1D1D1D', imageUrl: '/productos/gold-penny/gold-penny-black.jpg', sizes: this.generateSizes() },
-            { id: 'gold-penny-color8', colorName: 'Color #8', hexColor: '#3A2411', imageUrl: '/productos/gold-penny/gold-penny-color8.jpg', sizes: this.generateSizes() },
-            { id: 'gold-penny-whiskey', colorName: 'Whiskey', hexColor: '#70554A', imageUrl: '/productos/gold-penny/gold-penny-whiskey.jpg', sizes: this.generateSizes() },
-            { id: 'gold-penny-cola', colorName: 'Cola', hexColor: '#6B4424', imageUrl: '/productos/gold-penny/gold-penny-cola.jpg', sizes: this.generateSizes(), isSuede: true },
-            { id: 'gold-penny-polo', colorName: 'Polo', hexColor: '#4D2E21', imageUrl: '/productos/gold-penny/gold-penny-polo.jpg', sizes: this.generateSizes(), isSuede: true }
+            { id: 'gold-penny-black', colorName: 'Black', hexColor: '#1D1D1D', imageUrl: '/productos/gold-penny/gold-penny-black.webp', sizes: this.generateSizes() },
+            { id: 'gold-penny-color8', colorName: 'Color #8', hexColor: '#3A2411', imageUrl: '/productos/gold-penny/gold-penny-color8.webp', sizes: this.generateSizes() },
+            { id: 'gold-penny-whiskey', colorName: 'Whiskey', hexColor: '#70554A', imageUrl: '/productos/gold-penny/gold-penny-whiskey.webp', sizes: this.generateSizes() },
+            { id: 'gold-penny-cola', colorName: 'Cola', hexColor: '#6B4424', imageUrl: '/productos/gold-penny/gold-penny-cola.webp', sizes: this.generateSizes(), isSuede: true },
+            { id: 'gold-penny-polo', colorName: 'Polo', hexColor: '#4D2E21', imageUrl: '/productos/gold-penny/gold-penny-polo.webp', sizes: this.generateSizes(), isSuede: true }
           ]
         },
         {
           styleName: 'James Slipper',
           price: 100,
           variants: [
-            { id: 'gold-james-cacaosuede', colorName: 'Suede Toast', hexColor: '#B2702B', imageUrl: '/productos/gold-james/gold-james-suedetoast.jpg', sizes: this.generateSizes(), isSuede: true },
-            { id: 'gold-james-waxypullup', colorName: 'Cacao Waxy Pull-up', hexColor: '#4D3B37', imageUrl: '/productos/gold-james/gold-james-waxy.jpg', sizes: this.generateSizes() },
+            { id: 'gold-james-cacaosuede', colorName: 'Suede Toast', hexColor: '#B2702B', imageUrl: '/productos/gold-james/gold-james-suedetoast.webp', sizes: this.generateSizes(), isSuede: true },
+            { id: 'gold-james-waxypullup', colorName: 'Cacao Waxy Pull-up', hexColor: '#4D3B37', imageUrl: '/productos/gold-james/gold-james-waxy.webp', sizes: this.generateSizes() },
           ]
         },
         {
           styleName: 'Columbus Boat Shoe',
           price: 130,
           variants: [
-            { id: 'gold-columbus-blue', colorName: 'Deep Blue Grain', hexColor: '#403B5B', imageUrl: '/productos/gold-columbus/gold-columbus-blue.jpg', sizes: this.generateSizes() },
-            { id: 'gold-columbus-green', colorName: 'Hunter Green', hexColor: '#5D5B31', imageUrl: '/productos/gold-columbus/gold-columbus-green.jpg', sizes: this.generateSizes(), isSuede: true },
-            { id: 'gold-columbus-natural', colorName: 'Natural', hexColor: '#A1866B', imageUrl: '/productos/gold-columbus/gold-columbus-natural.jpg', sizes: this.generateSizes() },
+            { id: 'gold-columbus-blue', colorName: 'Deep Blue Grain', hexColor: '#403B5B', imageUrl: '/productos/gold-columbus/gold-columbus-blue.webp', sizes: this.generateSizes() },
+            { id: 'gold-columbus-green', colorName: 'Hunter Green', hexColor: '#5D5B31', imageUrl: '/productos/gold-columbus/gold-columbus-green.webp', sizes: this.generateSizes(), isSuede: true },
+            { id: 'gold-columbus-natural', colorName: 'Natural', hexColor: '#A1866B', imageUrl: '/productos/gold-columbus/gold-columbus-natural.webp', sizes: this.generateSizes() },
           ]
         }
       ]
@@ -148,7 +151,7 @@ export class PoFormComponent {
           styleName: 'Edmund Plain Toe Boot',
           price: 90,
           variants: [
-            { id: 'green-edmund-black', colorName: 'Black Waxy Leather', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund-black.png', sizes: this.generateSizes() },
+            { id: 'green-edmund-black', colorName: 'Black Waxy Leather', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
             { id: 'green-edmund-brown', colorName: 'Brown Waxy Leather', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
             { id: 'green-edmund-mesa', colorName: 'Mesa Suede', hexColor: '#3A2411', imageUrl: '', sizes: this.generateSizes(), isSuede: true },
           ]
@@ -170,7 +173,7 @@ export class PoFormComponent {
     }
   }
 
-  // ---- FUNCIONES DEL CARRUSEL ----
+  // ---- FUNCIONES DEL CARRUSEL PEQUEÑO ----
   getVariantIndex(categoryName: string, styleName: string): number {
     const key = categoryName + '-' + styleName;
     return this.activeVariantIndices[key] || 0;
@@ -190,13 +193,38 @@ export class PoFormComponent {
     this.activeVariantIndices[key] = (current - 1 + length) % length;
   }
 
-  openImage(url: string) {
-    if (url) this.selectedImage = url;
+  // ---- FUNCIONES DEL MODAL GIGANTE ----
+  openModal(categoryName: string, style: ProductStyle, startIndex: number) {
+    this.modalData = { categoryName, style, currentIndex: startIndex };
+    this.isModalOpen = true;
   }
 
-  closeImage() {
-    this.selectedImage = null;
+  closeModal() {
+    this.isModalOpen = false;
   }
+
+  modalNext(event: Event) {
+    event.stopPropagation();
+    if (this.modalData.style) {
+      const len = this.modalData.style.variants.length;
+      this.modalData.currentIndex = (this.modalData.currentIndex + 1) % len;
+      // Sincronizar el carrusel de fondo con la imagen del modal
+      const key = this.modalData.categoryName + '-' + this.modalData.style.styleName;
+      this.activeVariantIndices[key] = this.modalData.currentIndex;
+    }
+  }
+
+  modalPrev(event: Event) {
+    event.stopPropagation();
+    if (this.modalData.style) {
+      const len = this.modalData.style.variants.length;
+      this.modalData.currentIndex = (this.modalData.currentIndex - 1 + len) % len;
+      // Sincronizar el carrusel de fondo con la imagen del modal
+      const key = this.modalData.categoryName + '-' + this.modalData.style.styleName;
+      this.activeVariantIndices[key] = this.modalData.currentIndex;
+    }
+  }
+  // ----------------------------------------
 
   get totalPairs(): number {
     let pairs = 0;
