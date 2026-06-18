@@ -11,6 +11,7 @@ export interface ProductVariant {
   hexColor: string;
   sizes: SizeOption[];
   selected?: boolean;
+  isSuede?: boolean;
 }
 
 export interface ProductStyle {

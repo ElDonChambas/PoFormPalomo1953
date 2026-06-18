@@ -13,23 +13,7 @@
     </div>
 
     <div class="mb-8">
-      <h2 class="text-xl font-semibold mb-4 text-gray-700">Billing & Shipping Information</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <input type="text" [(ngModel)]="customer.companyName" placeholder="Company Name" class="w-full p-2 border rounded focus:ring-2 focus:ring-gray-400 outline-none">
-        <input type="text" [(ngModel)]="customer.contactName" placeholder="Contact Name" class="w-full p-2 border rounded focus:ring-2 focus:ring-gray-400 outline-none">
-        <input type="email" [(ngModel)]="customer.email" placeholder="Email Address" class="w-full p-2 border rounded focus:ring-2 focus:ring-gray-400 outline-none">
-        <input type="text" [(ngModel)]="customer.phone" placeholder="Phone Number" class="w-full p-2 border rounded focus:ring-2 focus:ring-gray-400 outline-none">
-        
-        <input type="text" [(ngModel)]="customer.city" placeholder="City" class="w-full p-2 border rounded focus:ring-2 focus:ring-gray-400 outline-none">
-        <input type="text" [(ngModel)]="customer.country" placeholder="Country" class="w-full p-2 border rounded focus:ring-2 focus:ring-gray-400 outline-none">
-        
-        <textarea [(ngModel)]="customer.billingAddress" placeholder="Billing Address" class="w-full p-2 border rounded focus:ring-2 focus:ring-gray-400 outline-none"></textarea>
-        <textarea [(ngModel)]="customer.shippingAddress" placeholder="Shipping Address" class="w-full p-2 border rounded focus:ring-2 focus:ring-gray-400 outline-none"></textarea>
-      </div>
-    </div>
-
-    <div class="mb-8">
-      <h2 class="text-2xl font-bold mb-6 text-gray-800 border-b-2 border-black inline-block pb-1">Select Products & Quantities</h2>
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 border-b-2 border-[#294337] inline-block pb-1">Select Products & Quantities</h2>
       
       <div *ngFor="let category of categories" class="mb-10 border border-gray-300 rounded-lg overflow-hidden shadow-sm">
         
@@ -42,7 +26,26 @@
           <div *ngFor="let style of category.styles" class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
             
             <div class="flex gap-4">
-              <img [src]="style.variants[0].imageUrl" class="w-24 h-24 object-cover rounded-md border border-gray-200 cursor-pointer hover:opacity-80" (click)="openImage(style.variants[0].imageUrl)">
+              
+              <div class="relative w-24 flex flex-col items-center shrink-0">
+                <div class="relative w-24 h-24 rounded-md border border-gray-200 overflow-hidden group bg-gray-100 flex items-center justify-center">
+                  
+                  <img *ngIf="style.variants[getVariantIndex(category.categoryName, style.styleName)].imageUrl" 
+                       [src]="style.variants[getVariantIndex(category.categoryName, style.styleName)].imageUrl" 
+                       class="w-full h-full object-cover cursor-pointer hover:opacity-80" 
+                       (click)="openImage(style.variants[getVariantIndex(category.categoryName, style.styleName)].imageUrl)">
+                  
+                  <span *ngIf="!style.variants[getVariantIndex(category.categoryName, style.styleName)].imageUrl" class="text-[10px] text-gray-400 text-center p-1 leading-tight">Palomo<br>1953</span>
+                  
+                  <button *ngIf="style.variants.length > 1" (click)="prevVariant(category.categoryName, style.styleName, style.variants.length, $event)" 
+                          class="absolute left-0 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black text-white w-6 h-6 flex items-center justify-center rounded-r transition-colors">‹</button>
+                  <button *ngIf="style.variants.length > 1" (click)="nextVariant(category.categoryName, style.styleName, style.variants.length, $event)" 
+                          class="absolute right-0 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black text-white w-6 h-6 flex items-center justify-center rounded-l transition-colors">›</button>
+                </div>
+                <span class="text-[10px] font-bold text-gray-500 uppercase mt-2 text-center leading-tight px-1">
+                  {{ style.variants[getVariantIndex(category.categoryName, style.styleName)].colorName }}
+                </span>
+              </div>
               
               <div class="flex flex-col justify-center">
                 <h3 class="text-lg leading-tight font-bold text-gray-800 mb-1">{{ style.styleName }}</h3>
@@ -53,7 +56,7 @@
                        (click)="variant.selected = !variant.selected"
                        [style.backgroundColor]="variant.hexColor"
                        class="w-7 h-7 rounded-full border border-gray-300 shadow-sm cursor-pointer transition-all"
-                       [ngClass]="{'ring-2 ring-offset-2 ring-black': variant.selected}"
+                       [ngClass]="{'ring-2 ring-offset-2 ring-[#294337]': variant.selected, 'suede-texture': variant.isSuede}"
                        [title]="variant.colorName">
                   </div>
                 </div>
@@ -62,7 +65,6 @@
 
             <div class="mt-4 flex flex-col gap-3">
               <ng-container *ngFor="let variant of style.variants; let vIndex = index">
-                
                 <div *ngIf="variant.selected" class="bg-gray-50 border border-gray-200 rounded-md p-3">
                   <div class="flex items-center justify-between mb-2">
                     <h4 class="font-bold text-sm text-gray-700 uppercase tracking-wider">{{ variant.colorName }}</h4>
@@ -71,7 +73,6 @@
                   <div class="grid grid-cols-4 min-[400px]:grid-cols-6 gap-1.5">
                     <div *ngFor="let sizeOpt of variant.sizes; let sIndex = index" class="border border-gray-300 bg-white rounded flex flex-col items-center justify-center p-1.5 shadow-sm">
                       <span class="text-[11px] font-bold text-gray-500 leading-none mb-1.5">Sz {{ sizeOpt.size }}</span>
-                      
                       <div class="flex items-center justify-between w-full">
                         <button (click)="updateQty(variant, sIndex, -1)" class="w-6 h-6 bg-gray-100 hover:bg-gray-200 rounded flex items-center justify-center text-gray-600 font-bold leading-none transition-colors">-</button>
                         <span class="text-xs font-bold text-gray-800">{{ sizeOpt.quantity }}</span>
@@ -79,7 +80,6 @@
                       </div>
                     </div>
                   </div>
-                  
                 </div>
               </ng-container>
             </div>
@@ -89,18 +89,41 @@
       </div>
     </div>
 
-    <div class="mb-6 p-6 bg-gray-100 rounded-lg flex justify-between items-center border border-gray-200">
-      <span class="text-xl font-semibold text-gray-700">Estimated Total:</span>
-      <span class="text-3xl font-bold text-gray-900">${{ orderTotal | number:'1.2-2' }}</span>
+    <div class="mb-6 border border-[#294337] rounded-lg overflow-hidden bg-white shadow-sm">
+      
+      <div (click)="isSummaryOpen = !isSummaryOpen" class="p-4 bg-gray-50 flex justify-between items-center cursor-pointer hover:bg-gray-100 transition-colors">
+        <div>
+          <span class="text-lg font-bold text-gray-800">Order Summary</span>
+          <span class="text-sm font-medium text-[#294337] ml-2">({{ totalPairs }} pairs)</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="text-2xl font-bold text-[#294337]">${{ orderTotal | number:'1.2-2' }}</span>
+          <span class="text-gray-500 text-sm transform transition-transform duration-300" [ngClass]="{'rotate-180': isSummaryOpen}">▼</span>
+        </div>
+      </div>
+      
+      <div *ngIf="isSummaryOpen" class="p-4 border-t border-gray-200 bg-white">
+         <div *ngIf="orderSummaryItems.length === 0" class="text-gray-400 text-center py-4 text-sm italic">
+           No items selected yet.
+         </div>
+         
+         <div *ngFor="let item of orderSummaryItems" class="flex justify-between items-start py-3 border-b border-gray-100 last:border-0 last:pb-0">
+           <div class="pr-4">
+             <p class="font-bold text-gray-800 text-sm">{{ item.name }}</p>
+             <p class="text-xs text-gray-500 mt-1 leading-relaxed">{{ item.sizes }}</p>
+           </div>
+           <div class="text-right shrink-0">
+             <p class="font-bold text-[#294337] text-sm">${{ item.subtotal | number:'1.2-2' }}</p>
+             <p class="text-[10px] text-gray-400 mt-1">Qty: {{ item.qty }}</p>
+           </div>
+         </div>
+      </div>
     </div>
 
     <button (click)="submitOrder()" [disabled]="isLoading" 
-            class="w-full bg-[#294337] text-white font-bold py-4 rounded hover:bg-gray-800 transition disabled:bg-gray-400 disabled:cursor-not-allowed">
-      {{ isLoading ? 'SENDING ORDER...' : 'SUBMIT PURCHASE ORDER' }}
+            class="w-full bg-[#294337] text-white font-bold py-4 rounded hover:opacity-90 transition disabled:bg-gray-400 disabled:cursor-not-allowed">
+      {{ isLoading ? 'PROCESSING...' : 'SUBMIT PURCHASE ORDER' }}
     </button>
-    
-  </div>
-</div>
 
 <div *ngIf="selectedImage" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 p-4 backdrop-blur-sm" (click)="closeImage()">
   <div class="relative w-full max-w-lg flex justify-center">
