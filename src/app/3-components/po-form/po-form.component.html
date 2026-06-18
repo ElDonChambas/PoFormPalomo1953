@@ -33,7 +33,7 @@
       
       <div *ngFor="let category of categories" class="mb-10 border border-gray-300 rounded-lg overflow-hidden shadow-sm">
         
-        <div class="bg-black text-white p-4">
+        <div class="bg-[#294337] text-white p-4">
           <h2 class="text-xl font-bold tracking-widest uppercase">{{ category.categoryName }}</h2>
           <p class="text-sm text-gray-300">{{ category.description }}</p>
         </div>
@@ -95,7 +95,7 @@
     </div>
 
     <button (click)="submitOrder()" [disabled]="isLoading" 
-            class="w-full bg-black text-white font-bold py-4 rounded hover:bg-gray-800 transition disabled:bg-gray-400 disabled:cursor-not-allowed">
+            class="w-full bg-[#294337] text-white font-bold py-4 rounded hover:bg-gray-800 transition disabled:bg-gray-400 disabled:cursor-not-allowed">
       {{ isLoading ? 'SENDING ORDER...' : 'SUBMIT PURCHASE ORDER' }}
     </button>
     
