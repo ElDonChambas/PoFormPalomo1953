@@ -186,3 +186,56 @@
 
   </div>
 </div>
+
+<button (click)="openCartModal()" 
+        class="fixed top-6 right-6 z-40 bg-[#294337] text-white p-3.5 rounded-full shadow-2xl flex items-center justify-center hover:scale-105 hover:bg-gray-800 transition-all group border-2 border-white">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+  </svg>
+  
+  <span class="absolute -top-2 -right-2 bg-red-500 text-white text-[11px] font-bold min-w-[24px] h-6 px-1 flex items-center justify-center rounded-full border-2 border-white shadow-sm">
+    {{ totalPairs }}
+  </span>
+</button>
+
+<div *ngIf="isCartModalOpen" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70 p-4 backdrop-blur-sm" (click)="closeCartModal()">
+  <div class="relative w-full max-w-lg bg-white rounded-xl shadow-2xl flex flex-col max-h-[85vh] overflow-hidden" (click)="$event.stopPropagation()">
+    
+    <div class="p-5 border-b border-gray-200 flex justify-between items-center bg-gray-50">
+      <div class="flex items-center gap-2">
+        <h2 class="text-xl font-bold text-gray-800">Your Cart</h2>
+        <span class="bg-[#294337] text-white text-xs px-2 py-1 rounded-full font-bold">{{ totalPairs }} pairs</span>
+      </div>
+      <button (click)="closeCartModal()" class="text-gray-400 hover:text-gray-600 text-3xl font-bold leading-none transition-colors">&times;</button>
+    </div>
+    
+    <div class="p-5 overflow-y-auto flex-1 bg-white">
+      <div *ngIf="orderSummaryItems.length === 0" class="text-gray-400 text-center py-8 text-sm italic">
+        Your cart is empty.
+      </div>
+       
+      <div *ngFor="let item of orderSummaryItems" class="flex justify-between items-start py-4 border-b border-gray-100 last:border-0 last:pb-0">
+        <div class="pr-4">
+          <p class="font-bold text-gray-800 text-sm md:text-base">{{ item.name }}</p>
+          <p class="text-xs text-gray-500 mt-1.5 leading-relaxed bg-gray-50 inline-block p-1.5 rounded">{{ item.sizes }}</p>
+        </div>
+        <div class="text-right shrink-0 flex flex-col justify-between">
+          <p class="font-bold text-[#294337] text-base">${{ item.subtotal | number:'1.2-2' }}</p>
+          <p class="text-[11px] font-semibold text-gray-400 mt-2">Qty: {{ item.qty }}</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="p-5 border-t border-gray-200 bg-gray-50 flex justify-between items-center">
+      <div class="flex flex-col">
+        <span class="text-sm font-semibold text-gray-500 uppercase tracking-wide">Estimated Total</span>
+        <span class="text-2xl font-bold text-[#294337]">${{ orderTotal | number:'1.2-2' }}</span>
+      </div>
+      <button (click)="closeCartModal()" class="bg-[#294337] text-white px-6 py-2.5 rounded hover:bg-gray-800 transition-colors font-bold text-sm shadow-md">
+        CONTINUE
+      </button>
+    </div>
+
+  </div>
+</div>

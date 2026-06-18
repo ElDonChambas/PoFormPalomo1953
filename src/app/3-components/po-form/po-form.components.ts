@@ -25,6 +25,8 @@ export class PoFormComponent {
   isSummaryOpen = false; 
 
   isModalOpen = false;
+  isCartModalOpen = false;
+
   modalData: { categoryName: string, style: ProductStyle | null, currentIndex: number } = { categoryName: '', style: null, currentIndex: 0 };
 
   activeVariantIndices: { [styleName: string]: number } = {};
@@ -201,6 +203,14 @@ export class PoFormComponent {
 
   closeModal() {
     this.isModalOpen = false;
+  }
+
+  openCartModal() {
+    this.isCartModalOpen = true;
+  }
+
+  closeCartModal() {
+    this.isCartModalOpen = false;
   }
 
   modalNext(event: Event) {
