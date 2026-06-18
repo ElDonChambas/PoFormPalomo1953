@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PoForm } from './po-form';
+import { PoFormComponent } from './po-form.components';
 
-describe('PoForm', () => {
-  let component: PoForm;
-  let fixture: ComponentFixture<PoForm>;
+describe('PoFormComponent', () => {
+  let component: PoFormComponent;
+  let fixture: ComponentFixture<PoFormComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PoForm]
+      imports: [PoFormComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PoForm);
+    fixture = TestBed.createComponent(PoFormComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });
