@@ -125,7 +125,7 @@ export class PoFormComponent {
           styleName: 'James Slipper',
           price: 100,
           variants: [
-            { id: 'gold-james-cacaosuede', colorName: 'Suede Toast', hexColor: '#B2702B', imageUrl: '/productos/gold-james/gold-james-suedetoast.jpg', sizes: this.generateSizes() },
+            { id: 'gold-james-cacaosuede', colorName: 'Suede Toast', hexColor: '#B2702B', imageUrl: '/productos/gold-james/gold-james-suedetoast.jpg', sizes: this.generateSizes(), isSuede: true },
             { id: 'gold-james-waxypullup', colorName: 'Cacao Waxy Pull-up', hexColor: '#4D3B37', imageUrl: '/productos/gold-james/gold-james-waxy.jpg', sizes: this.generateSizes() },
           ]
         },
