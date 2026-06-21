@@ -158,6 +158,248 @@ export class PoFormComponent {
             { id: 'green-edmund-mesa', colorName: 'Mesa Suede', hexColor: '#3A2411', imageUrl: '', sizes: this.generateSizes(), isSuede: true },
           ]
         }, 
+        {
+          styleName: 'Ernest Cap Toe Boot',
+          price: 90,
+          variants: [
+            { id: 'green-ernest-black', colorName: 'Black Waxy Leather', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
+            { id: 'green-ernest-brown', colorName: 'Brown Waxy Leather', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
+            { id: 'green-ernest-natural', colorName: 'Natural Waxy Leather', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
+            { id: 'green-ernest-lava-stone', colorName: 'Lava Stone', hexColor: '#3A2411', imageUrl: '', sizes: this.generateSizes() },
+            { id: 'green-ernest-cinder', colorName: 'Cinder Brown Waxy Suede', hexColor: '#3A2411', imageUrl: '', sizes: this.generateSizes(), isSuede: true },
+            { id: 'green-ernest-crazy', colorName: 'Crazy Horse Dark Roast', hexColor: '#3A2411', imageUrl: '', sizes: this.generateSizes() },         
+          ]
+        },
+        {
+          styleName: 'Sherman Chelsea Boot',
+          price: 90,
+          variants: [
+            { id: 'green-sherman-black', colorName: 'Black Waxy Leather', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
+            { id: 'green-sherman-brown', colorName: 'Brown Waxy Leather', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
+            { id: 'green-sherman-natural', colorName: 'Natural Waxy Leather', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
+            { id: 'green-sherman-cinder', colorName: 'Cinder Brown Waxy Suede', hexColor: '#3A2411', imageUrl: '', sizes: this.generateSizes() },
+            { id: 'green-sherman-mesa', colorName: 'Mesa Suede', hexColor: '#3A2411', imageUrl: '', sizes: this.generateSizes(), isSuede : true },
+            { id: 'green-sherman-crazy', colorName: 'Crazy Horse Dark Roast', hexColor: '#3A2411', imageUrl: '', sizes: this.generateSizes() },
+          ]
+        },
+        {
+          styleName: 'Yukon Ranger Boot',
+          price: 90,
+          variants: [
+            { id: 'green-yukon-black', colorName: 'Black Waxy Leather', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
+            { id: 'green-yukon-seahorse', colorName: 'Seahorse Waxy Leather', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
+            { id: 'green-yukon-grain-dark', colorName: 'Grain Dark Brown', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },            
+          ]
+        },
+        {
+          styleName: 'Vermont Camp Lug',
+          price: 80,
+          variants: [
+            { id: 'green-vermont-Natural', colorName: 'Natural Waxy Leather', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
+            { id: 'green-vermont-cider', colorName: 'Cinder Brown Waxy Suede', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
+          ]
+        },
+        {
+          styleName: 'Acadia Camp Moc',
+          price: 70,
+          variants: [
+            { id: 'green-acadia-Natural', colorName: 'Natural Waxy Leather', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
+            { id: 'green-acadia-cider', colorName: 'Mesa Suede', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
+          ]
+        },
+        {
+          styleName: 'Palomo Loafer',
+          price: 70,
+          variants: [
+            { id: 'green-penny-black', colorName: 'Black Moc', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
+            { id: 'green-penny-brown', colorName: 'Brown Moc', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
+            { id: 'green-penny-burgundy', colorName: 'Burgundy Moc', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
+            { id: 'green-penny-sandstone', colorName: 'Sandstone Waxy Leather', hexColor: '#3A2411', imageUrl: '', sizes: this.generateSizes()},
+            { id: 'green-penny-mesa', colorName: 'Mesa Suede', hexColor: '#3A2411', imageUrl: '', sizes: this.generateSizes(), isSuede : true },
+            { id: 'green-penny-blue', colorName: 'Deep Blue Suede', hexColor: '#3A2411', imageUrl: '', sizes: this.generateSizes() },
+          ]
+        },
+        {
+          styleName: 'Lola Loafer Woman',
+          price: 70,
+          variants: [
+            { id: 'green-lola-black', colorName: 'Black Moc', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
+            { id: 'green-penny-burgundy', colorName: 'Burgundy Moc', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
+            { id: 'green-penny-pony', colorName: 'Pony', hexColor: '#3A2411', imageUrl: '', sizes: this.generateSizes()},
+            { id: 'green-penny-leopard', colorName: 'Leopard', hexColor: '#3A2411', imageUrl: '', sizes: this.generateSizes(), isSuede : true },
+          ]
+        },
+        {
+          styleName: 'Paloma Boat Shoe',
+          price: 65,
+          variants: [
+            { id: 'gold-paloma-natural', colorName: 'Natural', hexColor: '#A1866B', imageUrl: '/productos/gold-columbus/gold-columbus-natural.webp', sizes: this.generateSizes() },
+            { id: 'gold-paloma-green', colorName: 'Hunter Green', hexColor: '#5D5B31', imageUrl: '/productos/gold-columbus/gold-columbus-green.webp', sizes: this.generateSizes(), isSuede: true },
+            { id: 'gold-paloma-sand', colorName: 'Sand', hexColor: '#A1866B', imageUrl: '/productos/gold-columbus/gold-columbus-natural.webp', sizes: this.generateSizes() },
+          ]
+        
+        },
+      ]
+    },
+    {
+      categoryName: 'NEW Label - Range Plan spring',
+      description: 'New collection just for you in Spring',
+      styles: [
+        {
+          styleName: 'Edmund Plain Toe Boot',
+          price: 90,
+          variants: [
+            { id: 'new-edmund-velour-stucco', colorName: 'Velour Aware Stucco', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
+            { id: 'new-edmund-repello-autum', colorName: 'Repello Calf Autum Gold', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
+          ]
+        },
+        {
+          styleName: 'Ernest Cap Toe Boot',
+          price: 90,
+          variants: [
+            { id: 'new-ernest-velour-stucco', colorName: 'Velour Aware Stucco', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
+            { id: 'new-ernest-repello-autum', colorName: 'Repello Calf Autum Gold', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
+          ]
+        },
+        {
+          styleName: 'Sherman Chelsea Boot',
+          price: 90,
+          variants: [
+            { id: 'new-sherman-velour-stucco', colorName: 'Velour Aware Stucco', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
+            { id: 'new-sherman-repello-autum', colorName: 'Repello Calf Autum Gold', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
+          ]
+        },
+        {
+          styleName: 'Penny Loafer',
+          price: 90,
+          variants: [
+            { id: 'new-penny-velour-stucco', colorName: 'Velour Aware Stucco', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
+            { id: 'new-penny-suede-sensory', colorName: 'Suede Sensory Chesnut', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes(), isSuede : true },
+            { id: 'new-penny-bentley-blue', colorName: 'Bentley Blue', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
+          ]
+        },
+        {
+          styleName: 'Woven Penny',
+          price: 90,
+          variants: [
+            { id: 'new-woven-suede-bliss', colorName: 'Suede Bliss', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
+            { id: 'new-woven-suede-valencia', colorName: 'Suede Valencia', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes(), isSuede : true },
+            { id: 'new-woven-portland-black', colorName: 'Portland Black', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
+            { id: 'new-woven-suede-silky', colorName: 'Suede Silky', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
+            { id: 'new-woven-portland-brown', colorName: 'Portland Brown', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
+          ]
+        },
+        {
+          styleName: 'Summer Penny',
+          price: 90,
+          variants: [
+            { id: 'new-summer-velour-ivory', colorName: 'Velour Aware Ivory', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
+            { id: 'new-summer-suede-sensory', colorName: 'Suede Sensory Chesnut', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes(), isSuede : true },
+            { id: 'new-summer-bentley-blue', colorName: 'Bentley Blue', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
+          ]
+        },
+        {
+          styleName: 'Penny Venettian',
+          price: 90,
+          variants: [
+            { id: 'new-penny-venettian-repello-autum', colorName: 'Repello Calf Autum Gold', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
+            { id: 'new-penny-venettian-valencia-suede', colorName: 'Valencia Suede Asparago', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes(), isSuede : true },
+          ]
+        },
+        {
+          styleName: 'Venettian',
+          price: 90,
+          variants: [
+            { id: 'new-venettian-bentley-blue', colorName: 'Bentley Blue', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
+            { id: 'new-venettian-res-negro', colorName: 'Res Negro', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes(), isSuede : true },
+            { id: 'new-venettian-repello-autum', colorName: 'Repello Calf Autum Gold', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
+            { id: 'new-venettian-bologña-dark-brown', colorName: 'Bologña Dark Brown', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
+          ]
+        },
+        {
+          styleName: 'Wallabe',
+          price: 90,
+          variants: [
+            { id: 'new-wallabe-repello-autum', colorName: 'Repello Calf Autum Gold', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
+            { id: 'new-wallabe-valencia-suede', colorName: 'Valencia Suede Asparago', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes(), isSuede : true },
+          ]
+        },
+        {
+          styleName: 'Boat Shoe',
+          price: 90,
+          variants: [
+            { id: 'new-boat-shoe-bentley-blue', colorName: 'Bentley Blue', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
+          ]
+        },
+        {
+          styleName: 'Venerrian Mule',
+          price: 90,
+          variants: [
+            { id: 'new-venettian-mule-tressor', colorName: 'Tressor Cognac', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
+            { id: 'new-venettian-mule-bentley-dktan', colorName: 'Bentley Dktan', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes(), isSuede : true },
+          ]
+        },
+        {
+          styleName: 'Penny Destalonado',
+          price: 90,
+          variants: [
+            { id: 'new-penny-destalonado-venado-res-negro', colorName: 'Venado Res Negro', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
+            { id: 'new-penny-destalonado-suede-valencia-tundra', colorName: 'Suede Valencia Tundra', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes(), isSuede : true },
+          ]
+        },
+      ]
+    },
+    {
+      categoryName: 'NEW Label - Range Plan Fall',
+      description: 'New collection just for you in Fall',
+      styles: [
+        {
+          styleName: 'Ernest Cap Toe Boot',
+          price: 90,
+          variants: [
+            { id: 'new-ernest-waxy-hickory', colorName: 'Waxy Comander Hickory', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
+          ]
+        },
+        {
+          styleName: 'Sherman Chelsea Boot',
+          price: 90,
+          variants: [
+            { id: 'new-sherman-waxy-hickory', colorName: 'Waxy Comander Hickory', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
+          ]
+        },
+        {
+          styleName: 'Hiker Boot',
+          price: 90,
+          variants: [
+            { id: 'new-hiker-padrock', colorName: 'Padrock Negro', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
+            { id: 'new-hiker-new-portland', colorName: 'New Portland', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes(), isSuede : true },
+            { id: 'new-hiker-waxy-hickory', colorName: 'Waxy Comander Hickory', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
+          ]
+        },
+        {
+          styleName: 'Duck',
+          price: 90,
+          variants: [
+            { id: 'new-duck-bison-rushmore', colorName: 'Bison Rushmore Folklore', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
+          ]
+        },
+        {
+          styleName: 'Slipper',
+          price: 90,
+          variants: [
+            { id: 'new-slipper-desert-oasis', colorName: 'Desert Oasis Light Fawn', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
+            { id: 'new-slipper-bentley-black', colorName: 'Bentley Black', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes(), isSuede : true },
+          ]
+        },
+        {
+          styleName: 'Dress Loafer',
+          price: 90,
+          variants: [
+            { id: 'new-dress-rois-black', colorName: 'Rois Black', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
+            { id: 'new-dress-monn-granato', colorName: 'Monn Granato', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes(), isSuede : true },
+            { id: 'new-dress-brown-maple', colorName: 'Brown Maple', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes(), isSuede : true },
+          ]
+        }
       ]
     }
   ];
