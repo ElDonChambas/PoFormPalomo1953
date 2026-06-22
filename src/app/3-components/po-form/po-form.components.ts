@@ -249,15 +249,15 @@ export class PoFormComponent {
           styleName: 'Edmund Plain Toe Boot',
           price: 90,
           variants: [
-            { id: 'new-edmund-velour-stucco', colorName: 'Velour Aware Stucco', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
-            { id: 'new-edmund-repello-autum', colorName: 'Repello Calf Autum Gold', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
+            { id: 'new-edmund-velour-stucco', colorName: 'Velour Aware Stucco', hexColor: '#1a1a1a', imageUrl: '/productos/new-spring-edmund/new-edmund-velour-stucco.webp', sizes: this.generateSizes() },
+            { id: 'new-edmund-repello-autum', colorName: 'Repello Calf Autum Gold', hexColor: '#5C4033', imageUrl: '/productos/new-spring-edmund/new-edmund-repello-autum.webp', sizes: this.generateSizes() },
           ]
         },
         {
           styleName: 'Ernest Cap Toe Boot',
           price: 90,
           variants: [
-            { id: 'new-ernest-velour-stucco', colorName: 'Velour Aware Stucco', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
+            { id: 'new-ernest-velour-stucco', colorName: 'Velour Aware Stucco', hexColor: '#1a1a1a', imageUrl: '', sizes: this.generateSizes() },
             { id: 'new-ernest-repello-autum', colorName: 'Repello Calf Autum Gold', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
           ]
         },
@@ -265,24 +265,24 @@ export class PoFormComponent {
           styleName: 'Sherman Chelsea Boot',
           price: 90,
           variants: [
-            { id: 'new-sherman-velour-stucco', colorName: 'Velour Aware Stucco', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
-            { id: 'new-sherman-repello-autum', colorName: 'Repello Calf Autum Gold', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
+            { id: 'new-sherman-velour-stucco', colorName: 'Velour Aware Stucco', hexColor: '#1a1a1a', imageUrl: '', sizes: this.generateSizes() },
+            { id: 'new-sherman-repello-autum', colorName: 'Repello Calf Autum Gold', hexColor: '#5C4033', imageUrl: '/productos/new-spring-sherman/new-sherman-repello-autum.webp', sizes: this.generateSizes() },
           ]
         },
         {
           styleName: 'Penny Loafer',
           price: 90,
           variants: [
-            { id: 'new-penny-velour-stucco', colorName: 'Velour Aware Stucco', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
-            { id: 'new-penny-suede-sensory', colorName: 'Suede Sensory Chesnut', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes(), isSuede : true },
-            { id: 'new-penny-bentley-blue', colorName: 'Bentley Blue', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
+            { id: 'new-penny-velour-stucco', colorName: 'Velour Aware Stucco', hexColor: '#1a1a1a', imageUrl: '/productos/new-spring-penny/new-penny-velour-stucco.webp', sizes: this.generateSizes(), isSuede : true },
+            { id: 'new-penny-suede-sensory', colorName: 'Suede Sensory Chesnut', hexColor: '#5C4033', imageUrl: '/productos/new-spring-penny/new-penny-suede-sensory.webp', sizes: this.generateSizes(), isSuede : true },
+            { id: 'new-penny-bentley-blue', colorName: 'Bentley Blue', hexColor: '#5C4033', imageUrl: '/productos/new-spring-penny/new-penny-bentley-blue.webp', sizes: this.generateSizes(), isSuede : true },
           ]
         },
         {
           styleName: 'Woven Penny',
           price: 90,
           variants: [
-            { id: 'new-woven-suede-bliss', colorName: 'Suede Bliss', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
+            { id: 'new-woven-suede-bliss', colorName: 'Suede Bliss', hexColor: '#1a1a1a', imageUrl: '', sizes: this.generateSizes() },
             { id: 'new-woven-suede-valencia', colorName: 'Suede Valencia', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes(), isSuede : true },
             { id: 'new-woven-portland-black', colorName: 'Portland Black', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
             { id: 'new-woven-suede-silky', colorName: 'Suede Silky', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
@@ -293,58 +293,61 @@ export class PoFormComponent {
           styleName: 'Summer Penny',
           price: 90,
           variants: [
-            { id: 'new-summer-velour-ivory', colorName: 'Velour Aware Ivory', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
-            { id: 'new-summer-suede-sensory', colorName: 'Suede Sensory Chesnut', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes(), isSuede : true },
-            { id: 'new-summer-bentley-blue', colorName: 'Bentley Blue', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
+            { id: 'new-summer-velour-ivory', colorName: 'Velour Aware Ivory', hexColor: '#1a1a1a', imageUrl: '/productos/new-spring-summer-penny/new-spring-summer-penny-velour-ivory.webp', sizes: this.generateSizes() },
+            { id: 'new-summer-suede-sensory', colorName: 'Suede Sensory Chesnut', hexColor: '#5C4033', imageUrl: '/productos/new-spring-summer-penny/new-spring-summer-penny-suede-sensory.webp', sizes: this.generateSizes(), isSuede : true },
+            { id: 'new-summer-bentley-blue', colorName: 'Bentley Blue', hexColor: '#5C4033', imageUrl: '/productos/new-spring-summer-penny/new-spring-summer-penny-bentley-blue.webp', sizes: this.generateSizes() },
           ]
         },
         {
           styleName: 'Penny Venettian',
           price: 90,
           variants: [
-            { id: 'new-penny-venettian-repello-autum', colorName: 'Repello Calf Autum Gold', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
-            { id: 'new-penny-venettian-valencia-suede', colorName: 'Valencia Suede Asparago', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes(), isSuede : true },
+            { id: 'new-penny-venettian-repello-autum', colorName: 'Repello Calf Autum Gold', hexColor: '#1a1a1a', imageUrl: '/productos/new-spring-penny-venettian/new-spring-penny-venettian-repello-autum.webp', sizes: this.generateSizes() },
+            { id: 'new-penny-venettian-valencia-suede', colorName: 'Valencia Suede Asparago', hexColor: '#5C4033', imageUrl: '/productos/new-spring-penny-venettian/new-spring-penny-venettian-valencia-asparago.webp', sizes: this.generateSizes(), isSuede : true },
           ]
         },
         {
           styleName: 'Venettian',
           price: 90,
           variants: [
-            { id: 'new-venettian-bentley-blue', colorName: 'Bentley Blue', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
-            { id: 'new-venettian-res-negro', colorName: 'Res Negro', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes(), isSuede : true },
-            { id: 'new-venettian-repello-autum', colorName: 'Repello Calf Autum Gold', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
-            { id: 'new-venettian-bologña-dark-brown', colorName: 'Bologña Dark Brown', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
+            { id: 'new-venettian-bentley-blue', colorName: 'Bentley Blue', hexColor: '#1a1a1a', imageUrl: '/productos/new-spring-venettian/new-spring-venettian-bentley-blue.webp', sizes: this.generateSizes() },
+            { id: 'new-venettian-res-negro', colorName: 'Res Negro', hexColor: '#5C4033', imageUrl: '/productos/new-spring-venettian/new-spring-venettian-res-negro.webp', sizes: this.generateSizes(), isSuede : true },
+            { id: 'new-venettian-repello-autum', colorName: 'Repello Calf Autum Gold', hexColor: '#5C4033', imageUrl: '/productos/new-spring-venettian/new-spring-venettian-repello-autum.webp', sizes: this.generateSizes() },
+            { id: 'new-venettian-bologña-dark-brown', colorName: 'Bologña Dark Brown', hexColor: '#5C4033', imageUrl: '/productos/new-spring-venettian/new-spring-venettian-bologña-brown.webp', sizes: this.generateSizes() },
           ]
         },
         {
-          styleName: 'Wallabe',
+          styleName: 'Hiker Shoe',
           price: 90,
           variants: [
-            { id: 'new-wallabe-repello-autum', colorName: 'Repello Calf Autum Gold', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
-            { id: 'new-wallabe-valencia-suede', colorName: 'Valencia Suede Asparago', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes(), isSuede : true },
+            { id: 'new-hiker-velour-stucco', colorName: 'Velour Aware Stucco', hexColor: '#1a1a1a', imageUrl: '/productos/new-hiker/new-hiker-velour-stucco.webp', sizes: this.generateSizes() },
+            { id: 'new-hiker-portland-setter', colorName: 'New Portland Setter Light', hexColor: '#5C4033', imageUrl: '/productos/new-hiker/new-hiker-portland-setter.webp', sizes: this.generateSizes(), isSuede : true },
+            { id: 'new-hiker-hair-multicolor', colorName: 'Hair Multicolor', hexColor: '#5C4033', imageUrl: '/productos/new-hiker/new-hiker-hair-multicolor.webp', sizes: this.generateSizes() },
+            { id: 'new-hiker-cow-b&w', colorName: 'Cow Black & White', hexColor: '#5C4033', imageUrl: '/productos/new-hiker/new-hiker-cow-b&w.webp', sizes: this.generateSizes() },
           ]
         },
         {
           styleName: 'Boat Shoe',
           price: 90,
           variants: [
-            { id: 'new-boat-shoe-bentley-blue', colorName: 'Bentley Blue', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
+            { id: 'new-boat-shoe-bentley-blue', colorName: 'Bentley Blue', hexColor: '#1a1a1a', imageUrl: '/productos/new-boat-shoe/new-boat-shoe-bentley-blue.webp', sizes: this.generateSizes() },
+            { id: 'new-boat-shoe-repello-autum', colorName: 'Repello Calf Autum Gold', hexColor: '#1a1a1a', imageUrl: '/productos/new-boat-shoe/new-boat-shoe-repello-autum.webp', sizes: this.generateSizes() },
           ]
         },
         {
-          styleName: 'Venerrian Mule',
+          styleName: 'Venettian Mule',
           price: 90,
           variants: [
-            { id: 'new-venettian-mule-tressor', colorName: 'Tressor Cognac', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
-            { id: 'new-venettian-mule-bentley-dktan', colorName: 'Bentley Dktan', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes(), isSuede : true },
+            { id: 'new-venettian-mule-tressor', colorName: 'Tressor Cognac', hexColor: '#1a1a1a', imageUrl: '/productos/new-venettian-mule/new-venettian-mule-tressor.webp', sizes: this.generateSizes() },
+            { id: 'new-venettian-mule-bentley-dktan', colorName: 'Bentley Dktan', hexColor: '#5C4033', imageUrl: '/productos/new-venettian-mule/new-venettian-mule-bentley-dktan.webp', sizes: this.generateSizes(), isSuede : true },
           ]
         },
         {
           styleName: 'Penny Destalonado',
           price: 90,
           variants: [
-            { id: 'new-penny-destalonado-venado-res-negro', colorName: 'Venado Res Negro', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
-            { id: 'new-penny-destalonado-suede-valencia-tundra', colorName: 'Suede Valencia Tundra', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes(), isSuede : true },
+            { id: 'new-penny-destalonado-venado-res-negro', colorName: 'Venado Res Negro', hexColor: '#1a1a1a', imageUrl: '/productos/new-penny-destalonado/new-penny-destalonado-res-negro.webp', sizes: this.generateSizes() },
+            { id: 'new-penny-destalonado-suede-valencia-tundra', colorName: 'Suede Valencia Tundra', hexColor: '#5C4033', imageUrl: '/productos/new-penny-destalonado/new-penny-destalonado-suede-tundra.webp', sizes: this.generateSizes(), isSuede : true },
           ]
         },
       ]
