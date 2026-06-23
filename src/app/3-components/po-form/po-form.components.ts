@@ -1,4 +1,4 @@
-import { Component, inject, ChangeDetectorRef } from '@angular/core'; 
+import { Component, inject, ChangeDetectorRef, OnInit } from '@angular/core'; 
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { GoogleSheetsService } from '../../2-services/google-sheets.service';
@@ -15,7 +15,7 @@ import { ProductCategory, ProductVariant, CustomerInfo, Product, SizeOption, Pro
     }
   `]
 })
-export class PoFormComponent {
+export class PoFormComponent implements OnInit {
   private sheetsService = inject(GoogleSheetsService);
   private cdr = inject(ChangeDetectorRef);
 
@@ -34,6 +34,14 @@ export class PoFormComponent {
   customer: CustomerInfo = {
     companyName: '', contactName: '', email: '', phone: '', city: '', country: '', billingAddress: '', shippingAddress: ''
   };
+
+  ngOnInit() {
+    console.log(
+      "%c🚀 Built with Angular by Rodrigo Ávila\n%cLet's connect: https://eldonchambas.github.io/PersonalWebsiteEnglishRodrigoAvila/",
+      "font-size: 14px; font-weight: bold; color: #FFFFFF;",
+      "font-size: 12px; color: gray;"
+    );
+  }
 
   categories: ProductCategory[] = [
     {
