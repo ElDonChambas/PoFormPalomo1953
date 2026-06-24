@@ -80,8 +80,12 @@
                   <div *ngFor="let variant of style.variants" 
                        (click)="variant.selected = !variant.selected"
                        [style.backgroundColor]="variant.hexColor"
-                       class="w-7 h-7 rounded-full border border-gray-300 shadow-sm cursor-pointer transition-all"
-                       [ngClass]="{'ring-2 ring-offset-2 ring-[#294337]': variant.selected, 'suede-texture': variant.isSuede}"
+                       [style.backgroundImage]="variant.swatchUrl ? 'url(' + variant.swatchUrl + ')' : null"
+                       class="w-7 h-7 rounded-full border border-gray-300 shadow-sm cursor-pointer transition-all bg-cover bg-center"
+                       [ngClass]="{
+                         'ring-2 ring-offset-2 ring-[#294337]': variant.selected, 
+                         'suede-texture': variant.isSuede && !variant.swatchUrl
+                       }"
                        [title]="variant.colorName">
                   </div>
                 </div>

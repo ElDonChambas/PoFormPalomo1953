@@ -3,7 +3,6 @@ export interface SizeOption {
   quantity: number;
 }
 
-// Nueva estructura jerárquica para la interfaz visual
 export interface ProductVariant {
   id: string;
   colorName: string;
@@ -12,6 +11,7 @@ export interface ProductVariant {
   sizes: SizeOption[];
   selected?: boolean;
   isSuede?: boolean;
+  swatchUrl?: string;
 }
 
 export interface ProductStyle {
