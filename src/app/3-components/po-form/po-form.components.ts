@@ -228,9 +228,9 @@ export class PoFormComponent implements OnInit {
           variants: [
             { id: 'green-lola-black', colorName: 'Black Moc', hexColor: '#1a1a1a', imageUrl: '/productos/green-lola/green-lola-black.webp', sizes: this.generateSizes() },
             { id: 'green-lola-burgundy', colorName: 'Burgundy Moc', hexColor: '#3A2411', imageUrl: '/productos/green-lola/green-lola-burgundy.webp', sizes: this.generateSizes() },
-            { id: 'green-lola-pony', colorName: 'Pony', hexColor: '#3A2411', imageUrl: '/productos/green-lola/green-lola-pony.webp', sizes: this.generateSizes()},
-            { id: 'green-lola-leopard', colorName: 'Leopard', hexColor: '#3A2411', imageUrl: '/productos/green-lola/green-lola-leopard.webp', sizes: this.generateSizes(), isSuede : true },
-            { id: 'green-lola-snake', colorName: 'Snake', hexColor: '#3A2411', imageUrl: '/productos/green-lola/green-lola-snake.webp', sizes: this.generateSizes(), isSuede : true },
+            { id: 'green-lola-pony', colorName: 'Pony', hexColor: '#3A2411', imageUrl: '/productos/green-lola/green-lola-pony.webp', swatchUrl: '/swatches/pony.webp', sizes: this.generateSizes()},
+            { id: 'green-lola-leopard', colorName: 'Leopard', hexColor: '#3A2411', imageUrl: '/productos/green-lola/green-lola-leopard.webp', swatchUrl: '/swatches/leopard.webp', sizes: this.generateSizes(), isSuede : true },
+            { id: 'green-lola-snake', colorName: 'Snake', hexColor: '#3A2411', imageUrl: '/productos/green-lola/green-lola-snake.webp', swatchUrl: '/swatches/snake.webp', sizes: this.generateSizes(), isSuede : true },
           ]
         },
         {
