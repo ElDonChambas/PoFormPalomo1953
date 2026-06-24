@@ -182,7 +182,7 @@ export class PoFormComponent implements OnInit {
             { id: 'green-sherman-black', colorName: 'Black Waxy Leather', hexColor: '#1a1a1a', imageUrl: '/productos/green-sherman/green-sherman-black.webp', sizes: this.generateSizes() },
             { id: 'green-sherman-brown', colorName: 'Brown Waxy Leather', hexColor: '#4D3B37', imageUrl: '/productos/green-sherman/green-sherman-brown.webp', sizes: this.generateSizes() },
             { id: 'green-sherman-natural', colorName: 'Natural Waxy Leather', hexColor: '#A1866B', imageUrl: '/productos/green-sherman/green-sherman-natural.webp', sizes: this.generateSizes() },
-            { id: 'green-sherman-cinder', colorName: 'Cinder Brown Waxy Suede', hexColor: '#6E5F41', imageUrl: '/productos/green-sherman/green-sherman-cinder-brown.webp', sizes: this.generateSizes() },
+            { id: 'green-sherman-cinder', colorName: 'Cinder Brown Waxy Suede', hexColor: '#6E5F41', imageUrl: '/productos/green-sherman/green-sherman-cinder-brown.webp', sizes: this.generateSizes(), isSuede : true },
             { id: 'green-sherman-mesa', colorName: 'Mesa Suede', hexColor: '#866D37', imageUrl: '/productos/green-sherman/green-sherman-mesa.webp', sizes: this.generateSizes(), isSuede : true },
           ]
         },
@@ -191,55 +191,54 @@ export class PoFormComponent implements OnInit {
           price: 90,
           variants: [
             { id: 'green-yukon-black', colorName: 'Black Waxy Leather', hexColor: '#1a1a1a', imageUrl: '/productos/green-yukon/green-yukon-black.webp', sizes: this.generateSizes() },
-            { id: 'green-yukon-seahorse', colorName: 'Seahorse Waxy Leather', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
-            { id: 'green-yukon-grain-dark', colorName: 'Grain Dark Brown', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },            
+            { id: 'green-yukon-seahorse', colorName: 'Seahorse Waxy Leather', hexColor: '#5C4033', imageUrl: '/productos/green-yukon/green-yukon-seahorse.webp', sizes: this.generateSizes() },
+            { id: 'green-yukon-grain-dark', colorName: 'Grain Dark Brown', hexColor: '#5C4033', imageUrl: '/productos/green-yukon/green-yukon-dark-brown.webp', sizes: this.generateSizes() },            
           ]
         },
         {
           styleName: 'Vermont Camp Lug',
           price: 80,
           variants: [
-            { id: 'green-vermont-Natural', colorName: 'Natural Waxy Leather', hexColor: '#1a1a1a', imageUrl: '/productos/green-vermont/green-vermont-Natural.webp', sizes: this.generateSizes() },
-            { id: 'green-vermont-cider', colorName: 'Cinder Brown Waxy Suede', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
+            { id: 'green-vermont-Natural', colorName: 'Natural Waxy Leather', hexColor: '#A1866B', imageUrl: '/productos/green-vermont/green-vermont-natural.webp', sizes: this.generateSizes() },
+            { id: 'green-vermont-cinder', colorName: 'Cinder Brown Waxy Suede', hexColor: '#6E5F41', imageUrl: '/productos/green-vermont/green-vermont-cinder-brown.webp', sizes: this.generateSizes(), isSuede : true },
           ]
         },
         {
           styleName: 'Acadia Camp Moc',
           price: 70,
           variants: [
-            { id: 'green-acadia-Natural', colorName: 'Natural Waxy Leather', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
-            { id: 'green-acadia-cider', colorName: 'Mesa Suede', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
+            { id: 'green-acadia-natural', colorName: 'Natural Waxy Leather', hexColor: '#A1866B', imageUrl: '/productos/green-acadia/green-acadia-natural.webp', sizes: this.generateSizes() },
+            { id: 'green-acadia-mesa', colorName: 'Mesa Suede', hexColor: '#866D37', imageUrl: '/productos/green-acadia/green-acadia-mesa.webp', sizes: this.generateSizes(), isSuede : true },
           ]
         },
         {
-          styleName: 'Palomo Loafer',
+          styleName: 'PALOMO® Loafer',
           price: 70,
           variants: [
-            { id: 'green-penny-black', colorName: 'Black Moc', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
-            { id: 'green-penny-brown', colorName: 'Brown Moc', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
-            { id: 'green-penny-burgundy', colorName: 'Burgundy Moc', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
-            { id: 'green-penny-sandstone', colorName: 'Sandstone Waxy Leather', hexColor: '#3A2411', imageUrl: '', sizes: this.generateSizes()},
-            { id: 'green-penny-mesa', colorName: 'Mesa Suede', hexColor: '#3A2411', imageUrl: '', sizes: this.generateSizes(), isSuede : true },
-            { id: 'green-penny-blue', colorName: 'Deep Blue Suede', hexColor: '#3A2411', imageUrl: '', sizes: this.generateSizes() },
+            { id: 'green-penny-black', colorName: 'Black Moc', hexColor: '#1a1a1a', imageUrl: '/productos/green-penny/green-penny-black.webp', sizes: this.generateSizes() },
+            { id: 'green-penny-brown', colorName: 'Brown Moc', hexColor: '#5C4033', imageUrl: '/productos/green-penny/green-penny-brown.webp', sizes: this.generateSizes() },
+            { id: 'green-penny-burgundy', colorName: 'Burgundy Moc', hexColor: '#3A2411', imageUrl: '/productos/green-penny/green-penny-burgundy.webp', sizes: this.generateSizes() },
+            { id: 'green-penny-sandstone', colorName: 'Sandstone Waxy Leather', hexColor: '#95591A', imageUrl: '/productos/green-penny/green-penny-sandstone.webp', sizes: this.generateSizes()},
+            { id: 'green-penny-mesa', colorName: 'Mesa Suede', hexColor: '#866D37', imageUrl: '/productos/green-penny/green-penny-mesa.webp', sizes: this.generateSizes(), isSuede : true },
           ]
         },
         {
           styleName: 'Lola Loafer Woman',
           price: 70,
           variants: [
-            { id: 'green-lola-black', colorName: 'Black Moc', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
-            { id: 'green-penny-burgundy', colorName: 'Burgundy Moc', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
-            { id: 'green-penny-pony', colorName: 'Pony', hexColor: '#3A2411', imageUrl: '', sizes: this.generateSizes()},
-            { id: 'green-penny-leopard', colorName: 'Leopard', hexColor: '#3A2411', imageUrl: '', sizes: this.generateSizes(), isSuede : true },
+            { id: 'green-lola-black', colorName: 'Black Moc', hexColor: '#1a1a1a', imageUrl: '/productos/green-lola/green-lola-black.webp', sizes: this.generateSizes() },
+            { id: 'green-lola-burgundy', colorName: 'Burgundy Moc', hexColor: '#3A2411', imageUrl: '/productos/green-lola/green-lola-burgundy.webp', sizes: this.generateSizes() },
+            { id: 'green-lola-pony', colorName: 'Pony', hexColor: '#3A2411', imageUrl: '/productos/green-lola/green-lola-pony.webp', sizes: this.generateSizes()},
+            { id: 'green-lola-leopard', colorName: 'Leopard', hexColor: '#3A2411', imageUrl: '/productos/green-lola/green-lola-leopard.webp', sizes: this.generateSizes(), isSuede : true },
+            { id: 'green-lola-snake', colorName: 'Snake', hexColor: '#3A2411', imageUrl: '/productos/green-lola/green-lola-snake.webp', sizes: this.generateSizes(), isSuede : true },
           ]
         },
         {
           styleName: 'Paloma Boat Shoe',
           price: 65,
           variants: [
-            { id: 'gold-paloma-natural', colorName: 'Natural', hexColor: '#A1866B', imageUrl: '/productos/gold-columbus/gold-columbus-natural.webp', sizes: this.generateSizes() },
-            { id: 'gold-paloma-green', colorName: 'Hunter Green', hexColor: '#5D5B31', imageUrl: '/productos/gold-columbus/gold-columbus-green.webp', sizes: this.generateSizes(), isSuede: true },
-            { id: 'gold-paloma-sand', colorName: 'Sand', hexColor: '#A1866B', imageUrl: '/productos/gold-columbus/gold-columbus-natural.webp', sizes: this.generateSizes() },
+            { id: 'green-paloma-green', colorName: 'Hunter Green', hexColor: '#5D5B31', imageUrl: '/productos/green-paloma/green-paloma-hunter-green.webp', sizes: this.generateSizes(), isSuede: true },
+            { id: 'green-paloma-sand', colorName: 'Sand', hexColor: '#B1AC8E', imageUrl: '/productos/green-paloma/green-paloma-sand.webp', sizes: this.generateSizes() },
           ]
         
         },
@@ -264,7 +263,7 @@ export class PoFormComponent implements OnInit {
           ]
         },
         {
-          styleName: 'Sahara',
+          styleName: 'Sahara Desert Boot',
           price: 90,
           variants: [
             { id: 'new-sahara-olive', colorName: 'Olive Suede', hexColor: '#1a1a1a', imageUrl: '/productos/new-sahara/new-sahara-olive.webp', sizes: this.generateSizes() },
@@ -281,7 +280,7 @@ export class PoFormComponent implements OnInit {
           ]
         },
         {
-          styleName: 'Portofino',
+          styleName: 'Portofino Driving Mocassin',
           price: 90,
           variants: [
             { id: 'new-portofino-toasted-velour', colorName: 'Toasted Velour', hexColor: '#1a1a1a', imageUrl: '/productos/new-portofino/new-portofino-toasted-velour.webp', sizes: this.generateSizes() },
@@ -300,29 +299,29 @@ export class PoFormComponent implements OnInit {
           ]
         },
         {
-          styleName: 'Savile',
+          styleName: 'Savile Loafer',
           price: 90,
           variants: [
-            { id: 'new-savile-velour-stucco', colorName: 'Velour Aware Stucco', hexColor: '#1a1a1a', imageUrl: '/productos/new-savile/new-savile-velour-stucco.webp', sizes: this.generateSizes(), isSuede : true },
-            { id: 'new-savile-suede-sensory', colorName: 'Suede Sensory Chesnut', hexColor: '#5C4033', imageUrl: '/productos/new-savile/new-savile-suede-sensory.webp', sizes: this.generateSizes(), isSuede : true },
-            { id: 'new-savile-noir-horween', colorName: 'Noir Horween', hexColor: '#5C4033', imageUrl: '/productos/new-savile/new-savile-noir-horween.webp', sizes: this.generateSizes(), isSuede : true },
+            { id: 'new-savile-cordovan-bourbon', colorName: 'Cordovan Bourbon', hexColor: '#3A2411', imageUrl: '/productos/new-savile/new-savile-cordovan.webp', sizes: this.generateSizes() },
+            { id: 'new-savile-garnet-horween', colorName: 'Garnet Horween', hexColor: '#4D2E21', imageUrl: '/productos/new-savile/new-savile-garnet.webp', sizes: this.generateSizes() },
+            { id: 'new-savile-noir-horween', colorName: 'Noir Horween', hexColor: '#1a1a1a', imageUrl: '/productos/new-savile/new-savile-noir-horween.webp', sizes: this.generateSizes() },
           ]
         },
         {
-          styleName: 'Capri',
+          styleName: 'Capri Loafer',
           price: 90,
           variants: [
-            { id: 'new-woven-suede-bliss', colorName: 'Suede Bliss', hexColor: '#1a1a1a', imageUrl: '', sizes: this.generateSizes() },
-            { id: 'new-woven-suede-valencia', colorName: 'Suede Valencia', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes()},
+            { id: 'new-capri-black', colorName: 'Capri Black', hexColor: '#1a1a1a', imageUrl: '/productos/new-capri/new-capri-black.webp', sizes: this.generateSizes() },
+            { id: 'new-capri-cognac', colorName: 'Capri Cognac', hexColor: '#3F372E', imageUrl: '/productos/new-capri/new-capri-cognac.webp', sizes: this.generateSizes()},
           ]
         },
         {
           styleName: 'Baja',
           price: 90,
           variants: [
-            { id: 'new-woven-portland-black', colorName: 'Portland Black', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
-            { id: 'new-woven-suede-silky', colorName: 'Suede Silky', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
-            { id: 'new-woven-portland-brown', colorName: 'Portland Brown', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
+            { id: 'new-baja-terra-suede', colorName: 'Terra Suede', hexColor: '#5C4033', imageUrl: '/productos/new-baja/new-baja-terra-suede.webp', sizes: this.generateSizes() },
+            { id: 'new-baja-midnight-suede', colorName: 'Midnight Suede', hexColor: '#5C4033', imageUrl: '/productos/new-baja/new-baja-midnight-suede.webp', sizes: this.generateSizes() },
+            { id: 'new-baja-oyster-suede', colorName: 'Oyster Suede', hexColor: '#5C4033', imageUrl: '/productos/new-baja/new-baja-oyster-suede.webp', sizes: this.generateSizes() },
           ]
         },
         {
@@ -331,7 +330,7 @@ export class PoFormComponent implements OnInit {
           variants: [
             { id: 'new-antibes-chesnut-suede', colorName: 'Chesnut Suede', hexColor: '#5C4033', imageUrl: '/productos/new-antibes/new-antibes-chesnut-suede.webp', sizes: this.generateSizes() },
             { id: 'new-antibes-stucco-velour', colorName: 'Stucco Velour', hexColor: '#5C4033', imageUrl: '/productos/new-antibes/new-antibes-stucco-velour.webp', sizes: this.generateSizes() },
-            { id: 'new-antibes-blue-suede', colorName: 'Blue Suede', hexColor: '#5C4033', imageUrl: '/productos/new-antibes/new-antibes-blue-suede.webp', sizes: this.generateSizes() },
+            { id: 'new-antibes-slate-blue', colorName: 'Slate Blue Suede', hexColor: '#5C4033', imageUrl: '/productos/new-antibes/new-antibes-slate-blue.webp', sizes: this.generateSizes() },
           ]
         },
         {
@@ -357,8 +356,8 @@ export class PoFormComponent implements OnInit {
           styleName: 'Freeport',
           price: 90,
           variants: [
-            { id: 'new-freeport-suede-saddle', colorName: 'Suede Saddle', hexColor: '#1a1a1a', imageUrl: '', sizes: this.generateSizes() },
-            { id: 'new-freeport-loden-suede', colorName: 'Loden Suede', hexColor: '#5C4033', imageUrl: '', sizes: this.generateSizes() },
+            { id: 'new-freeport-suede-saddle', colorName: 'Suede Saddle', hexColor: '#1a1a1a', imageUrl: '/productos/new-freeport/new-freeport-saddle.webp', sizes: this.generateSizes() },
+            { id: 'new-freeport-loden-suede', colorName: 'Loden Suede', hexColor: '#5C4033', imageUrl: '/productos/new-freeport/new-freeport-loden.webp', sizes: this.generateSizes() },
           ]
         },
         {
