@@ -341,14 +341,11 @@ export class PoFormComponent implements OnInit {
           ]
         },
         {
-          styleName: 'Ibiza Loafer',
+          styleName: 'Ibiza Summer Loafer',
           price: 105,
           variants: [
             { id: 'new-ibiza-ivory-velour', colorName: 'Ivory Velour', hexColor: '#ECE9D6', imageUrl: '/productos/new-ibiza/new-ibiza-ivory.webp', sizes: this.generateSizes(), isSuede : true },
             { id: 'new-ibiza-autum-gold', colorName: 'Autum Calf Gold', hexColor: '#6B4424', imageUrl: '/productos/new-ibiza/new-ibiza-autum-gold.webp', sizes: this.generateSizes(), isSuede : true },
-            { id: 'new-ibiza-slate-blue', colorName: 'Slate Blue Suede', hexColor: '#1C3240', imageUrl: '/productos/new-ibiza/new-ibiza-slate-blue.webp', sizes: this.generateSizes(), isSuede : true },
-            { id: 'new-ibiza-chestnut', colorName: 'Chestnut Suede', hexColor: '#4D2E21', imageUrl: '/productos/new-ibiza/new-ibiza-chestnut-suede.webp', sizes: this.generateSizes(), isSuede : true },
-            { id: 'new-ibiza-asparagus', colorName: 'Asparagus', hexColor: '#5D5B31', imageUrl: '/productos/new-ibiza/new-ibiza-asparagus.webp', sizes: this.generateSizes(), isSuede : true },
           ]
         },
         {
@@ -376,7 +373,16 @@ export class PoFormComponent implements OnInit {
           ]
         },
         {
-          styleName: 'Ponza Venettian',
+          styleName: 'Amalfi Summer Venetian',
+          price: 105,
+          variants: [
+            { id: 'new-amalfi-slate-blue', colorName: 'Slate Blue Suede', hexColor: '#1C3240', imageUrl: '/productos/new-ibiza/new-ibiza-slate-blue.webp', sizes: this.generateSizes(), isSuede : true },
+            { id: 'new-amalfi-chestnut', colorName: 'Chestnut Suede', hexColor: '#4D2E21', imageUrl: '/productos/new-ibiza/new-ibiza-chestnut-suede.webp', sizes: this.generateSizes(), isSuede : true },
+            { id: 'new-amalfi-asparagus', colorName: 'Asparagus', hexColor: '#5D5B31', imageUrl: '/productos/new-ibiza/new-ibiza-asparagus.webp', sizes: this.generateSizes(), isSuede : true },
+          ]
+        },
+        {
+          styleName: 'Ponza Venetian',
           price: 155,
           variants: [
             { id: 'new-ponza-stucco-velour', colorName: 'Stucco Velour', hexColor: '#BF9E4F', imageUrl: '/productos/new-ponza/new-ponza-stucco-velour.webp', sizes: this.generateSizes(), isSuede : true },
