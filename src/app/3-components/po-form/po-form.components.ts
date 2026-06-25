@@ -226,7 +226,7 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Lola Loafer Woman',
-          price: 70,
+          price: 86,
           variants: [
             { id: 'green-lola-black', colorName: 'Black Moc', hexColor: '#1a1a1a', imageUrl: '/productos/green-lola/green-lola-black.webp', sizes: this.generateSizes() },
             { id: 'green-lola-burgundy', colorName: 'Burgundy Moc', hexColor: '#3A2411', imageUrl: '/productos/green-lola/green-lola-burgundy.webp', sizes: this.generateSizes() },
@@ -303,9 +303,15 @@ export class PoFormComponent implements OnInit {
           styleName: 'Savile Loafer',
           price: 124,
           variants: [
-            { id: 'new-savile-cordovan-bourbon', colorName: 'Cordovan Bourbon', hexColor: '#3A2411', imageUrl: '/productos/new-savile/new-savile-cordovan.webp', sizes: this.generateSizes() },
             { id: 'new-savile-garnet-horween', colorName: 'Garnet Horween', hexColor: '#4D2E21', imageUrl: '/productos/new-savile/new-savile-garnet.webp', sizes: this.generateSizes() },
             { id: 'new-savile-noir-horween', colorName: 'Noir Horween', hexColor: '#1a1a1a', imageUrl: '/productos/new-savile/new-savile-noir-horween.webp', sizes: this.generateSizes() },
+          ]
+        },
+        {
+          styleName: 'Savile Loafer Cordovan Bourbon',
+          price: 523.50,
+          variants: [
+            { id: 'new-savile-cordovan-bourbon', colorName: 'Cordovan Bourbon', hexColor: '#3A2411', imageUrl: '/productos/new-savile/new-savile-cordovan.webp', sizes: this.generateSizes() },
           ]
         },
         {
@@ -355,7 +361,7 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Freeport Camp Moc Boot',
-          price: 167,
+          price: 155,
           variants: [
             { id: 'new-freeport-suede-saddle', colorName: 'Suede Saddle', hexColor: '#6B4424', imageUrl: '/productos/new-freeport/new-freeport-saddle.webp', swatchUrl: '/swatches/saddle.webp', sizes: this.generateSizes(), isSuede : true },
             { id: 'new-freeport-loden-suede', colorName: 'Loden Suede', hexColor: '#B2702B', imageUrl: '/productos/new-freeport/new-freeport-loden.webp', swatchUrl: '/swatches/loden.webp', sizes: this.generateSizes(), isSuede : true },
