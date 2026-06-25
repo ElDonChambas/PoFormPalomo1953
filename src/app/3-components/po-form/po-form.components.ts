@@ -49,7 +49,7 @@ export class PoFormComponent implements OnInit {
       styles: [
         {
           styleName: 'Edmund Plain Toe Boot',
-          price: 140,
+          price: 167,
           variants: [
             { id: 'gold-edmund-black', colorName: 'Black', hexColor: '#1D1D1D', imageUrl: '/productos/gold-edmund/gold-edmund-black.webp', sizes: this.generateSizes() },
             { id: 'gold-edmund-brown', colorName: 'Brown', hexColor: '#4D3B37', imageUrl: '/productos/gold-edmund/gold-edmund-brown.webp', sizes: this.generateSizes() },
@@ -60,7 +60,7 @@ export class PoFormComponent implements OnInit {
         }, 
         {
           styleName: 'Ernest Cap Toe Boot',
-          price: 140,
+          price: 167,
           variants: [
             { id: 'gold-ernest-black', colorName: 'Black', hexColor: '#1D1D1D', imageUrl: '/productos/gold-ernest/gold-ernest-black.webp', sizes: this.generateSizes() },
             { id: 'gold-ernest-brown', colorName: 'Brown', hexColor: '#4D3B37', imageUrl: '/productos/gold-ernest/gold-ernest-brown.webp', sizes: this.generateSizes() },
@@ -71,7 +71,7 @@ export class PoFormComponent implements OnInit {
         }, 
         {
           styleName: 'Sherman Chelsea Boot',
-          price: 140,
+          price: 167,
           variants: [
             { id: 'gold-chelsea-black', colorName: 'Black', hexColor: '#1D1D1D', imageUrl: '/productos/gold-sherman/gold-chelsea-Black.webp', sizes: this.generateSizes() },
             { id: 'gold-chelsea-brown', colorName: 'Brown', hexColor: '#4D3B37', imageUrl: '/productos/gold-sherman/gold-chelsea-brown.webp', sizes: this.generateSizes() },
@@ -124,7 +124,7 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'PALOMO® Loafer',
-          price: 90,
+          price: 133.50,
           variants: [
             { id: 'gold-penny-black', colorName: 'Black', hexColor: '#1D1D1D', imageUrl: '/productos/gold-penny/gold-penny-black.webp', sizes: this.generateSizes() },
             { id: 'gold-penny-color8', colorName: 'Color #8', hexColor: '#3A2411', imageUrl: '/productos/gold-penny/gold-penny-color8.webp', sizes: this.generateSizes() },
@@ -133,17 +133,19 @@ export class PoFormComponent implements OnInit {
             { id: 'gold-penny-polo', colorName: 'Polo', hexColor: '#4D2E21', imageUrl: '/productos/gold-penny/gold-penny-polo.webp', sizes: this.generateSizes(), isSuede: true }
           ]
         },
+/*
         {
           styleName: 'James Slipper',
-          price: 100,
+          price: 90,
           variants: [
             { id: 'gold-james-cacaosuede', colorName: 'Suede Toast', hexColor: '#B2702B', imageUrl: '/productos/gold-james/gold-james-suedetoast.webp', sizes: this.generateSizes(), isSuede: true },
             { id: 'gold-james-waxypullup', colorName: 'Cacao Waxy Pull-up', hexColor: '#4D3B37', imageUrl: '/productos/gold-james/gold-james-waxy.webp', sizes: this.generateSizes() },
           ]
         },
+*/
         {
           styleName: 'Columbus Boat Shoe',
-          price: 130,
+          price: 86,
           variants: [
             { id: 'gold-columbus-blue', colorName: 'Deep Blue Grain', hexColor: '#403B5B', imageUrl: '/productos/gold-columbus/gold-columbus-blue.webp', sizes: this.generateSizes() },
             { id: 'gold-columbus-green', colorName: 'Hunter Green', hexColor: '#5D5B31', imageUrl: '/productos/gold-columbus/gold-columbus-green.webp', sizes: this.generateSizes(), isSuede: true },
@@ -240,7 +242,6 @@ export class PoFormComponent implements OnInit {
             { id: 'green-paloma-green', colorName: 'Hunter Green', hexColor: '#5D5B31', imageUrl: '/productos/green-paloma/green-paloma-hunter-green.webp', sizes: this.generateSizes(), isSuede: true },
             { id: 'green-paloma-sand', colorName: 'Sand', hexColor: '#B1AC8E', imageUrl: '/productos/green-paloma/green-paloma-sand.webp', sizes: this.generateSizes() },
           ]
-        
         },
       ]
     },
@@ -249,7 +250,7 @@ export class PoFormComponent implements OnInit {
       styles: [
         {
           styleName: 'Newport Boat Shoe',
-          price: 90,
+          price: 119.50,
           variants: [
             { id: 'new-newport-shoe-ink-navy', colorName: 'Ink Navy', hexColor: '#323B48', imageUrl: '/productos/new-boat-shoe/new-boat-shoe-bentley-blue.webp', sizes: this.generateSizes(), isSuede: true },
             { id: 'new-newport-shoe-bourbon', colorName: 'Bourbon', hexColor: '#B2702B', imageUrl: '/productos/new-boat-shoe/new-boat-shoe-repello-autum.webp', sizes: this.generateSizes(), isSuede: true},
@@ -257,14 +258,14 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Sherman Chelsea Boot',
-          price: 90,
+          price: 167,
           variants: [
             { id: 'new-sherman-deser-tan', colorName: 'Desert Tan', hexColor: '#CDAE6D', imageUrl: '/productos/new-spring-sherman/new-sherman-repello-autum.webp', sizes: this.generateSizes(), isSuede: true },
           ]
         },
         {
           styleName: 'Sahara Desert Boot',
-          price: 90,
+          price: 155,
           variants: [
             { id: 'new-sahara-olive', colorName: 'Olive Suede', hexColor: '#6E5F41', imageUrl: '/productos/new-sahara/new-sahara-olive.webp', sizes: this.generateSizes(), isSuede: true },
             { id: 'new-sahara-cognac', colorName: 'Cognac Suede', hexColor: '#79460E', imageUrl: '/productos/new-sahara/new-sahara-cognac.webp', sizes: this.generateSizes(), isSuede: true },
@@ -273,7 +274,7 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Ischia Mule',
-          price: 90,
+          price: 95,
           variants: [
             { id: 'new-ischia-noir-leather', colorName: 'Noir Leather', hexColor: '#1a1a1a', imageUrl: '/productos/new-ischia/new-ischia-noir-leather.webp', sizes: this.generateSizes() },
             { id: 'new-ischia-tundra-suede', colorName: 'Tundra Suede', hexColor: '#887152', imageUrl: '/productos/new-ischia/new-ischia-tundra-suede.webp', sizes: this.generateSizes(), isSuede : true },
@@ -281,7 +282,7 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Portofino Driving Moc',
-          price: 90,
+          price: 86,
           variants: [
             { id: 'new-portofino-toasted-velour', colorName: 'Toasted Velour', hexColor: '#6B4424', imageUrl: '/productos/new-portofino/new-portofino-toasted-velour.webp', sizes: this.generateSizes(), isSuede : true },
             { id: 'new-portofino-fox-brown.velour', colorName: 'Fox Brown Velour', hexColor: '#4D2E21', imageUrl: '/productos/new-portofino/new-portofino-fox-brown-velour.webp', sizes: this.generateSizes(), isSuede : true },
@@ -289,7 +290,7 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Tahoe Hiker Boot',
-          price: 90,
+          price: 155,
           variants: [
             { id: 'new-tahoe-honey-leather', colorName: 'Honey Leather', hexColor: '#B2702B', imageUrl: '/productos/new-tahoe/new-tahoe-honey.webp', sizes: this.generateSizes() },
             { id: 'new-tahoe-caramel-glove', colorName: 'Caramel Glove', hexColor: '#4D3B37', imageUrl: '/productos/new-tahoe/new-tahoe-caramel.webp', swatchUrl: '/swatches/caramel.webp', sizes: this.generateSizes() },
@@ -300,7 +301,7 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Savile Loafer',
-          price: 90,
+          price: 124,
           variants: [
             { id: 'new-savile-cordovan-bourbon', colorName: 'Cordovan Bourbon', hexColor: '#3A2411', imageUrl: '/productos/new-savile/new-savile-cordovan.webp', sizes: this.generateSizes() },
             { id: 'new-savile-garnet-horween', colorName: 'Garnet Horween', hexColor: '#4D2E21', imageUrl: '/productos/new-savile/new-savile-garnet.webp', sizes: this.generateSizes() },
@@ -309,7 +310,7 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Capri Loafer',
-          price: 90,
+          price: 155,
           variants: [
             { id: 'new-capri-black', colorName: 'Capri Black', hexColor: '#1a1a1a', imageUrl: '/productos/new-capri/new-capri-black.webp', sizes: this.generateSizes() },
             { id: 'new-capri-cognac', colorName: 'Capri Cognac', hexColor: '#3F372E', imageUrl: '/productos/new-capri/new-capri-cognac.webp', sizes: this.generateSizes()},
@@ -317,7 +318,7 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Baja Loafer',
-          price: 90,
+          price: 133.50,
           variants: [
             { id: 'new-baja-terra-suede', colorName: 'Terra Suede', hexColor: '#887152', imageUrl: '/productos/new-baja/new-baja-terra-suede.webp', sizes: this.generateSizes(), isSuede : true },
             { id: 'new-baja-midnight-suede', colorName: 'Midnight Suede', hexColor: '#323B48', imageUrl: '/productos/new-baja/new-baja-midnight-suede.webp', sizes: this.generateSizes(), isSuede : true },
@@ -326,7 +327,7 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Antibes Loafer',
-          price: 90,
+          price: 124,
           variants: [
             { id: 'new-antibes-chesnut-suede', colorName: 'Chesnut Suede', hexColor: '#887152', imageUrl: '/productos/new-antibes/new-antibes-chesnut-suede.webp', sizes: this.generateSizes(), isSuede : true },
             { id: 'new-antibes-stucco-velour', colorName: 'Stucco Velour', hexColor: '#B1AC8E', imageUrl: '/productos/new-antibes/new-antibes-stucco-velour.webp', sizes: this.generateSizes(), isSuede : true },
@@ -335,7 +336,7 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Ibiza Loafer',
-          price: 90,
+          price: 105,
           variants: [
             { id: 'new-ibiza-ivory-velour', colorName: 'Ivory Velour', hexColor: '#ECE9D6', imageUrl: '/productos/new-ibiza/new-ibiza-ivory.webp', sizes: this.generateSizes(), isSuede : true },
             { id: 'new-ibiza-autum-gold', colorName: 'Autum Calf Gold', hexColor: '#6B4424', imageUrl: '/productos/new-ibiza/new-ibiza-autum-gold.webp', sizes: this.generateSizes(), isSuede : true },
@@ -346,7 +347,7 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Edmund Plain Toe Boot',
-          price: 90,
+          price: 167,
           variants: [
             { id: 'new-edmund-fawn-suede', colorName: 'Fawn Suede', hexColor: '#ECE9D6', imageUrl: '/productos/new-spring-edmund/new-edmund-fawn-suede.webp', sizes: this.generateSizes(), isSuede : true },
             { id: 'new-edmund-repello-autum', colorName: 'Repello Calf Autum Gold', hexColor: '#B2702B', imageUrl: '/productos/new-spring-edmund/new-edmund-repello-autum.webp', sizes: this.generateSizes(), isSuede : true },
@@ -354,7 +355,7 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Freeport Camp Moc Boot',
-          price: 90,
+          price: 167,
           variants: [
             { id: 'new-freeport-suede-saddle', colorName: 'Suede Saddle', hexColor: '#6B4424', imageUrl: '/productos/new-freeport/new-freeport-saddle.webp', swatchUrl: '/swatches/saddle.webp', sizes: this.generateSizes(), isSuede : true },
             { id: 'new-freeport-loden-suede', colorName: 'Loden Suede', hexColor: '#B2702B', imageUrl: '/productos/new-freeport/new-freeport-loden.webp', swatchUrl: '/swatches/loden.webp', sizes: this.generateSizes(), isSuede : true },
@@ -362,7 +363,7 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Stresa Sneaker',
-          price: 90,
+          price: 119.50,
           variants: [
             { id: 'new-stresa-noir-leather', colorName: 'Noir Leather', hexColor: '#1a1a1a', imageUrl: '/productos/new-stresa/new-stresa-noir-leather.webp', sizes: this.generateSizes() },
             { id: 'new-stresa-autum-gold', colorName: 'Autum Calf Gold', hexColor: '#B2702B', imageUrl: '/productos/new-stresa/new-stresa-autum-gold.webp', sizes: this.generateSizes(), isSuede : true },
@@ -370,7 +371,7 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Ponza Venettian',
-          price: 90,
+          price: 155,
           variants: [
             { id: 'new-ponza-stucco-velour', colorName: 'Stucco Velour', hexColor: '#BF9E4F', imageUrl: '/productos/new-ponza/new-ponza-stucco-velour.webp', sizes: this.generateSizes(), isSuede : true },
             { id: 'new-ponza-espresso-leather', colorName: 'Espresso Leather', hexColor: '#301D11', imageUrl: '/productos/new-ponza/new-ponza-espresso.webp', sizes: this.generateSizes(), isSuede : true },
