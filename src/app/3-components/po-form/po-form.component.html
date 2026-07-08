@@ -17,11 +17,88 @@
     <div class="mb-8">
       <h2 class="text-2xl font-bold mb-4 text-gray-800 border-b-2 border-[#294337] inline-block pb-1">Select Products & Quantities</h2>
       
-      <div class="mb-8 bg-gray-50 border-l-4 border-[#294337] p-4 rounded-r-lg shadow-sm">
-        <h3 class="font-bold text-gray-800 mb-1">How to place your order:</h3>
-        <p class="text-sm text-gray-600 leading-relaxed">
-          Click on any product image to view it in high resolution. Select your desired colors using the swatches next to the product name, and enter the quantities in the sizing grid that appears below. Your total pairs and estimated amount will be calculated automatically at the bottom. <strong>Please note:</strong> This form is for purchase order submission only; no payment is required at this stage.
-        </p>
+      <div class="mb-8 border border-[#294337] rounded-lg overflow-hidden shadow-sm bg-gray-50">
+        
+        <div class="p-4 bg-[#294337] text-white flex justify-between items-center cursor-pointer hover:bg-[#1e3229] transition-colors"
+             (click)="isGuidelinesOpen = !isGuidelinesOpen">
+          <h3 class="font-bold text-lg tracking-wide uppercase">How to place your order</h3>
+          <div class="transform transition-transform duration-300" [ngClass]="{'rotate-180': isGuidelinesOpen}">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>
+          </div>
+        </div>
+
+        <div *ngIf="isGuidelinesOpen" class="p-6 bg-white text-gray-700 text-sm border-t border-[#294337]">
+          
+          <div class="text-center mb-8">
+            <h4 class="text-xl font-bold text-[#294337] mb-2 tracking-widest uppercase">Welcome to the PALOMO®</h4>
+            <p class="mb-2">Thank you for the opportunity to be part of the PALOMO® experience.</p>
+            <p class="mb-4 italic text-gray-500">Each pair of PALOMO® shoes is crafted with intention, tradition, and attention to detail — designed to stand the test of time.</p>
+            <p class="leading-relaxed">This guide will walk you step by step through the Purchase Order process, ensuring a smooth and accurate ordering experience. Should you need any assistance along the way, our team is always happy to support you, contact us at <a href="mailto:info@palomo1953.com" class="font-bold text-[#294337] hover:underline">info@palomo1953.com</a>.</p>
+          </div>
+
+          <div class="space-y-6">
+            
+            <div>
+              <h5 class="font-bold text-gray-900 border-b border-gray-200 pb-1 mb-2 text-base">STEP 1 – Review the Price List</h5>
+              <p>Refer to the attached Price List for unit pricing and product details.</p>
+            </div>
+
+            <div>
+              <h5 class="font-bold text-gray-900 border-b border-gray-200 pb-1 mb-2 text-base">STEP 2 – Select the Order Form(s)</h5>
+              <p class="mb-2">Please select the appropriate order form(s) according to the product category you wish to order. Three options are available:</p>
+              <ul class="list-disc pl-5 space-y-1 mb-2 text-gray-600">
+                <li>Heartland Label Products</li>
+                <li>Core Label Products</li>
+                <li>SS27 Label Products</li>
+              </ul>
+              <p>You may complete one or more order forms, depending on the products you would like to purchase.</p>
+            </div>
+
+            <div>
+              <h5 class="font-bold text-gray-900 border-b border-gray-200 pb-1 mb-2 text-base">STEP 3 – Select Styles & Sizes</h5>
+              <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                <li>Use the selected order form(s) to choose the styles you wish to order.</li>
+                <li>Each style includes its available size range.</li>
+                <li>Specify the quantity per size for each style you are ordering.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h5 class="font-bold text-gray-900 border-b border-gray-200 pb-1 mb-2 text-base">STEP 4 – Complete Billing & Shipping Information</h5>
+              <p class="mb-2">Please complete all required fields accurately:</p>
+              <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                <li><strong class="text-gray-800">Bill To:</strong> Company name, billing address, contact name, TAX ID, phone number, and email.</li>
+                <li><strong class="text-gray-800">Ship To:</strong> Shipping address, contact name, phone number, and email.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h5 class="font-bold text-gray-900 border-b border-gray-200 pb-1 mb-2 text-base">STEP 5 – Review Order Details</h5>
+              <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                <li>Double-check quantities, sizes, styles, and pricing.</li>
+                <li>Confirm all information is complete and accurate before submission.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h5 class="font-bold text-gray-900 border-b border-gray-200 pb-1 mb-2 text-base">STEP 6 – Additional Comments</h5>
+              <p class="mb-2">At the end of the PO, you may include any additional comments or special instructions, such as:</p>
+              <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                <li>Requested delivery dates</li>
+                <li>Shipping preferences</li>
+                <li>Special requirements or notes</li>
+              </ul>
+            </div>
+
+            <div>
+              <h5 class="font-bold text-gray-900 border-b border-gray-200 pb-1 mb-2 text-base">STEP 7 – Submit Your Purchase Order</h5>
+              <p>Once completed, simply click the submit button at the bottom of the page so we can proceed with order confirmation. If you have any questions or need assistance, feel free to contact us.</p>
+            </div>
+
+          </div>
+        </div>
       </div>
       
       <div *ngFor="let category of categories" class="mb-10 border border-gray-300 rounded-lg overflow-hidden shadow-sm">

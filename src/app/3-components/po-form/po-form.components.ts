@@ -24,6 +24,7 @@ export class PoFormComponent implements OnInit {
   selectedImage: string | null = null; 
   isSummaryOpen = false; 
 
+  isGuidelinesOpen = false;
   isModalOpen = false;
   isCartModalOpen = false;
 
