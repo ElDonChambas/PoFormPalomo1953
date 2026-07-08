@@ -17,7 +17,8 @@ export interface ProductVariant {
 export interface ProductStyle {
   styleName: string;
   price: number;
-  description: string;
+  retailPrice?: number; // <-- NUEVO: Precio de venta sugerido (MSRP)
+  description?: string;
   variants: ProductVariant[];
 }
 
@@ -26,6 +27,7 @@ export interface ProductCategory {
   description: string;
   styles: ProductStyle[];
   isExpanded?: boolean;
+  activeView?: 'list' | 'form'; // <-- NUEVO: Controla el botón activo
 }
 
 export interface CustomerInfo {

@@ -50,12 +50,14 @@ export class PoFormComponent implements OnInit {
   categories: ProductCategory[] = [
     {categoryName: 'Heartland Collection',
       description: 'Our Premium & Handcrafted Collection',
-      isExpanded: true,
+      isExpanded: false,
+      activeView: 'list',
       styles: [
         {
           styleName: 'Edmund Plain Toe Boot',
           description: '• Horween® Chromexcel® / C.F. Stead® Repello® Suede • Goodyear Welted • Vibram® Outsole • Full Leather Lining',
-          price: 167,
+          price: 175,
+          retailPrice: 350,
           variants: [
             { id: 'gold-edmund-black', colorName: 'Black', hexColor: '#1D1D1D', imageUrl: '/productos/gold-edmund/gold-edmund-black.webp', sizes: this.generateSizes() },
             { id: 'gold-edmund-brown', colorName: 'Brown', hexColor: '#4D3B37', imageUrl: '/productos/gold-edmund/gold-edmund-brown.webp', sizes: this.generateSizes() },
@@ -67,7 +69,8 @@ export class PoFormComponent implements OnInit {
         {
           styleName: 'Ernest Cap Toe Boot',
           description: '• Horween® Chromexcel® / C.F. Stead® Repello® Suede • Goodyear Welted • Vibram® Outsole • Full Leather Lining',
-          price: 167,
+          price: 175,
+          retailPrice: 350,
           variants: [
             { id: 'gold-ernest-black', colorName: 'Black', hexColor: '#1D1D1D', imageUrl: '/productos/gold-ernest/gold-ernest-black.webp', sizes: this.generateSizes() },
             { id: 'gold-ernest-brown', colorName: 'Brown', hexColor: '#4D3B37', imageUrl: '/productos/gold-ernest/gold-ernest-brown.webp', sizes: this.generateSizes() },
@@ -79,7 +82,8 @@ export class PoFormComponent implements OnInit {
         {
           styleName: 'Sherman Chelsea Boot',
           description: '• Horween® Chromexcel® / C.F. Stead® Repello® Suede • 360° Flat Leather Goodyear Welted Construction • Vibram® Outsole • Full Leather Lining',
-          price: 167,
+          price: 175,
+          retailPrice: 350,
           variants: [
             { id: 'gold-chelsea-black', colorName: 'Black', hexColor: '#1D1D1D', imageUrl: '/productos/gold-sherman/gold-chelsea-Black.webp', sizes: this.generateSizes() },
             { id: 'gold-chelsea-brown', colorName: 'Brown', hexColor: '#4D3B37', imageUrl: '/productos/gold-sherman/gold-chelsea-brown.webp', sizes: this.generateSizes() },
@@ -93,7 +97,8 @@ export class PoFormComponent implements OnInit {
         {
           styleName: 'Yukon Ranger Boot',
           description: '• Horween® Chromexcel® / C.F. Stead® Repello® Calf Cola Suede • Handsewn Construction • Soft-Flex 100% Rubber Sole • Full Leather Lining and Midsole',
-          price: 130,
+          price: 175,
+          retailPrice: 350,
           variants: [
             { id: 'gold-yukon-black', colorName: 'Black', hexColor: '#1D1D1D', imageUrl: '/productos/gold-yukon/gold-yukon-black.webp', sizes: this.generateSizes() },
             { id: 'gold-yukon-whiskey', colorName: 'Whiskey', hexColor: '#70554A', imageUrl: '/productos/gold-yukon/gold-yukon-whiskey.webp', sizes: this.generateSizes() },
@@ -103,7 +108,8 @@ export class PoFormComponent implements OnInit {
         {
           styleName: 'Crescent Camp Bootie',
           description: '• Horween® Chromexcel® / C.F. Stead® Repello® Suede • Signature Handsewn with Waxed Thread • Soft-Flex 100% Rubber Sole • Full Leather Lining and Midsole',
-          price: 115,
+          price: 140,
+          retailPrice: 280,
           variants: [
             { id: 'gold-crescent-natural', colorName: 'Natural', hexColor: '#A1866B', imageUrl: '/productos/gold-crescent/gold-crescent-natural.webp', sizes: this.generateSizes() },
             { id: 'gold-crescent-cola', colorName: 'Cola', hexColor: '#6B4424', imageUrl: '/productos/gold-crescent/gold-crescent-cola.webp', sizes: this.generateSizes(), isSuede: true },
@@ -111,16 +117,18 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Vermont Camp Lug',
-          description: '',
-          price: 115,
+          description: '• Horween® Chromexcel® • Signature Handsewn with Waxed Thread • Soft-Flex 100% Rubber Sole • Full Leather Lining and Midsole',
+          price: 145,
+          retailPrice: 290,
           variants: [
             { id: 'gold-vermont-natural', colorName: 'Natural', hexColor: '#A1866B', imageUrl: '/productos/gold-vermont/gold-vermont-natural.webp', sizes: this.generateSizes() },
           ]
         },
         {
           styleName: 'Acadia Camp Moc',
-          description: '',
-          price: 95,
+          description: '• Horween® Chromexcel® / C.F. Stead® Repello® Suede • Signature Handsewn with Waxed Thread • Soft-Flex 100% Rubber Sole • Full Leather Lining',
+          price: 125,
+          retailPrice: 250,
           variants: [
             { id: 'gold-acadia-natural', colorName: 'Natural', hexColor: '#A1866B', imageUrl: '/productos/gold-acadia/gold-acadia-natural.webp', sizes: this.generateSizes() },
             { id: 'gold-acadia-cola', colorName: 'Cola', hexColor: '#6B4424', imageUrl: '/productos/gold-acadia/gold-acadia-cola.webp', sizes: this.generateSizes(), isSuede: true },
@@ -128,8 +136,9 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Baxter Camp Moc',
-          description: '',
-          price: 100,
+          description: '• Horween® Chromexcel® / C.F. Stead® Repello® Suede • Signature Handsewn with Waxed Thread • Soft-Flex 100% Rubber Sole • Full Leather Lining and Midsole',
+          price: 135,
+          retailPrice: 270,
           variants: [
             { id: 'gold-baxter-natural', colorName: 'Natural', hexColor: '#A1866B', imageUrl: '/productos/gold-baxter/gold-baxter-natural.webp', sizes: this.generateSizes() },
             { id: 'gold-baxter-cola', colorName: 'Cola', hexColor: '#6B4424', imageUrl: '/productos/gold-baxter/gold-baxter-cola.webp', sizes: this.generateSizes(), isSuede: true },
@@ -137,8 +146,9 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'PALOMO® Loafer',
-          description: '',
-          price: 133.50,
+          description: '• Horween® Chromexcel® / C.F. Stead® Repello® Suede • Full Tubular Moccasin with Double Blake Stitching Construction • High Quality Leather Sole • Full Leather Lining',
+          price: 140,
+          retailPrice: 280,
           variants: [
             { id: 'gold-penny-black', colorName: 'Black', hexColor: '#1D1D1D', imageUrl: '/productos/gold-penny/gold-penny-black.webp', sizes: this.generateSizes() },
             { id: 'gold-penny-color8', colorName: 'Color #8', hexColor: '#3A2411', imageUrl: '/productos/gold-penny/gold-penny-color8.webp', sizes: this.generateSizes() },
@@ -147,31 +157,24 @@ export class PoFormComponent implements OnInit {
             { id: 'gold-penny-polo', colorName: 'Polo', hexColor: '#4D2E21', imageUrl: '/productos/gold-penny/gold-penny-polo.webp', sizes: this.generateSizes(), isSuede: true }
           ]
         },
-/*
+
         {
           styleName: 'James Slipper',
-          price: 90,
+          price: 97.50,
+          retailPrice: 180,
           variants: [
             { id: 'gold-james-cacaosuede', colorName: 'Suede Toast', hexColor: '#B2702B', imageUrl: '/productos/gold-james/gold-james-suedetoast.webp', sizes: this.generateSizes(), isSuede: true },
             { id: 'gold-james-waxypullup', colorName: 'Cacao Waxy Pull-up', hexColor: '#4D3B37', imageUrl: '/productos/gold-james/gold-james-waxy.webp', sizes: this.generateSizes() },
           ]
         },
-*/
-        {
-          styleName: 'Columbus Boat Shoe',
-          description: '',
-          price: 86,
-          variants: [
-            { id: 'gold-columbus-blue', colorName: 'Deep Blue Grain', hexColor: '#403B5B', imageUrl: '/productos/gold-columbus/gold-columbus-blue.webp', sizes: this.generateSizes() },
-            { id: 'gold-columbus-green', colorName: 'Hunter Green', hexColor: '#5D5B31', imageUrl: '/productos/gold-columbus/gold-columbus-green.webp', sizes: this.generateSizes(), isSuede: true },
-            { id: 'gold-columbus-natural', colorName: 'Natural', hexColor: '#A1866B', imageUrl: '/productos/gold-columbus/gold-columbus-natural.webp', sizes: this.generateSizes() },
-          ]
-        }
+        
       ]
     },
+
     {categoryName: 'Core Collection',
       description: 'Everyday Classic Essentials',
-      isExpanded: true,
+      isExpanded: false,
+      activeView: 'list',
       styles: [
         {
           styleName: 'Edmund Plain Toe Boot',
@@ -248,6 +251,17 @@ export class PoFormComponent implements OnInit {
           ]
         },
         {
+          styleName: 'Columbus Boat Shoe',
+          description: '• Genuine Leather / Genuine Suede / Genuine Lefarc® • Full Tubular Boat Shoe • Handsewn with Waxed Handsewn Thread • Full Leather Lining',
+          price: 86,
+          retailPrice: 165,
+          variants: [
+            { id: 'gold-columbus-blue', colorName: 'Deep Blue Grain', hexColor: '#403B5B', imageUrl: '/productos/gold-columbus/gold-columbus-blue.webp', sizes: this.generateSizes() },
+            { id: 'gold-columbus-green', colorName: 'Hunter Green', hexColor: '#5D5B31', imageUrl: '/productos/gold-columbus/gold-columbus-green.webp', sizes: this.generateSizes(), isSuede: true },
+            { id: 'gold-columbus-natural', colorName: 'Natural', hexColor: '#A1866B', imageUrl: '/productos/gold-columbus/gold-columbus-natural.webp', sizes: this.generateSizes() },
+          ]
+        },
+        {
           styleName: 'Lola Loafer Woman',
           price: 86,
           description: '',
@@ -272,11 +286,13 @@ export class PoFormComponent implements OnInit {
     },
     {categoryName: 'SS27 Collection',
       description: 'New collection just for you.',
-      isExpanded: true,
+      isExpanded: false,
+      activeView: 'list',
       styles: [
         {
           styleName: 'Newport Boat Shoe',
-          price: 119.50,
+          price: 125,
+          retailPrice: 250,
           description: '',
           variants: [
             { id: 'new-newport-shoe-ink-navy', colorName: 'Ink Navy', hexColor: '#323B48', imageUrl: '/productos/new-boat-shoe/new-boat-shoe-bentley-blue.webp', sizes: this.generateSizes(), isSuede: true },
@@ -285,7 +301,8 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Sherman Chelsea Boot',
-          price: 167,
+          price: 175,
+          retailPrice: 350,
           description: '',
           variants: [
             { id: 'new-sherman-deser-tan', colorName: 'Desert Tan', hexColor: '#CDAE6D', imageUrl: '/productos/new-spring-sherman/new-sherman-repello-autum.webp', sizes: this.generateSizes(), isSuede: true },
@@ -293,7 +310,8 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Sahara Desert Boot',
-          price: 155,
+          price: 162.50,
+          retailPrice: 325,
           description: '',
           variants: [
             { id: 'new-sahara-olive', colorName: 'Olive Suede', hexColor: '#6E5F41', imageUrl: '/productos/new-sahara/new-sahara-olive.webp', sizes: this.generateSizes(), isSuede: true },
@@ -303,8 +321,8 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Ischia Mule',
-          price: 95,
-          description: '',
+          price: 97.50,
+          retailPrice: 195,
           variants: [
             { id: 'new-ischia-noir-leather', colorName: 'Noir Leather', hexColor: '#1a1a1a', imageUrl: '/productos/new-ischia/new-ischia-noir-leather.webp', sizes: this.generateSizes() },
             { id: 'new-ischia-tundra-suede', colorName: 'Tundra Suede', hexColor: '#887152', imageUrl: '/productos/new-ischia/new-ischia-tundra-suede.webp', sizes: this.generateSizes(), isSuede : true },
@@ -312,7 +330,8 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Portofino Driving Moc',
-          price: 86,
+          price: 97.50,
+          retailPrice: 195,
           description: '',
           variants: [
             { id: 'new-portofino-toasted-velour', colorName: 'Toasted Velour', hexColor: '#6B4424', imageUrl: '/productos/new-portofino/new-portofino-toasted-velour.webp', sizes: this.generateSizes(), isSuede : true },
@@ -321,7 +340,8 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Tahoe Hiker Boot',
-          price: 155,
+          price: 175,
+          retailPrice: 350,
           description: '',
           variants: [
             { id: 'new-tahoe-honey-leather', colorName: 'Honey Leather', hexColor: '#B2702B', imageUrl: '/productos/new-tahoe/new-tahoe-honey.webp', sizes: this.generateSizes() },
@@ -333,7 +353,8 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Savile Loafer',
-          price: 124,
+          price: 125,
+          retailPrice: 250,
           description: '',
           variants: [
             { id: 'new-savile-garnet-horween', colorName: 'Garnet Horween', hexColor: '#4D2E21', imageUrl: '/productos/new-savile/new-savile-garnet.webp', sizes: this.generateSizes() },
@@ -350,7 +371,8 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Capri Loafer',
-          price: 155,
+          price: 162.50,
+          retailPrice: 325,
           description: '',
           variants: [
             { id: 'new-capri-black', colorName: 'Capri Black', hexColor: '#1a1a1a', imageUrl: '/productos/new-capri/new-capri-black.webp', sizes: this.generateSizes() },
@@ -359,7 +381,8 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Baja Loafer',
-          price: 133.50,
+          price: 150,
+          retailPrice: 300,
           description: '',
           variants: [
             { id: 'new-baja-terra-suede', colorName: 'Terra Suede', hexColor: '#887152', imageUrl: '/productos/new-baja/new-baja-terra-suede.webp', sizes: this.generateSizes(), isSuede : true },
@@ -379,7 +402,8 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Ibiza Summer Loafer',
-          price: 105,
+          price: 112.50,
+          retailPrice: 225,
           description: '',
           variants: [
             { id: 'new-ibiza-ivory-velour', colorName: 'Ivory Velour', hexColor: '#ECE9D6', imageUrl: '/productos/new-ibiza/new-ibiza-ivory.webp', sizes: this.generateSizes(), isSuede : true },
@@ -388,13 +412,15 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Edmund Plain Toe Boot',
-          price: 167,
+          price: 175,
+          retailPrice: 350,
           description: '',
           variants: [
             { id: 'new-edmund-fawn-suede', colorName: 'Fawn Suede', hexColor: '#ECE9D6', imageUrl: '/productos/new-spring-edmund/new-edmund-fawn-suede.webp', sizes: this.generateSizes(), isSuede : true },
             { id: 'new-edmund-repello-autum', colorName: 'Repello Calf Autum Gold', hexColor: '#B2702B', imageUrl: '/productos/new-spring-edmund/new-edmund-repello-autum.webp', sizes: this.generateSizes(), isSuede : true },
           ]
         },
+/*
         {
           styleName: 'Freeport Camp Moc Boot',
           price: 155,
@@ -404,9 +430,11 @@ export class PoFormComponent implements OnInit {
             { id: 'new-freeport-loden-suede', colorName: 'Loden Suede', hexColor: '#B2702B', imageUrl: '/productos/new-freeport/new-freeport-loden.webp', swatchUrl: '/swatches/loden.webp', sizes: this.generateSizes(), isSuede : true },
           ]
         },
+*/
         {
           styleName: 'Stresa Sneaker',
-          price: 119.50,
+          price: 125,
+          retailPrice: 250,
           description: '',
           variants: [
             { id: 'new-stresa-noir-leather', colorName: 'Noir Leather', hexColor: '#1a1a1a', imageUrl: '/productos/new-stresa/new-stresa-noir-leather.webp', sizes: this.generateSizes() },
@@ -415,7 +443,8 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Amalfi Summer Venetian',
-          price: 105,
+          price: 112.50,
+          retailPrice: 225,
           description: '',
           variants: [
             { id: 'new-amalfi-slate-blue', colorName: 'Slate Blue Suede', hexColor: '#1C3240', imageUrl: '/productos/new-ibiza/new-ibiza-slate-blue.webp', sizes: this.generateSizes(), isSuede : true },
@@ -425,7 +454,8 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Ponza Venetian',
-          price: 155,
+          price: 162.50,
+          retailPrice: 325,
           description: '',
           variants: [
             { id: 'new-ponza-stucco-velour', colorName: 'Stucco Velour', hexColor: '#BF9E4F', imageUrl: '/productos/new-ponza/new-ponza-stucco-velour.webp', sizes: this.generateSizes(), isSuede : true },
@@ -434,8 +464,18 @@ export class PoFormComponent implements OnInit {
             { id: 'new-ponza-ink-navy-suede', colorName: 'Ink Navy Suede', hexColor: '#323B48', imageUrl: '/productos/new-ponza/new-ponza-ink-navy-suede.webp', sizes: this.generateSizes(), isSuede : true},
           ]
         },
+        {
+          styleName: 'Duck Boot',
+          price: 175,
+          retailPrice: 350,
+          description: '',
+          variants: [
+            { id: 'new-duck-boot', colorName: 'Whiskey', hexColor: '#70554A', imageUrl: '/productos/new-duck-boot/new-duck-boot.webp', sizes: this.generateSizes(), swatchUrl: '/swatches/duckBoot.webp' },
+          ]
+        },
       ]
     }
+
   ];
 
   generateSizes() {

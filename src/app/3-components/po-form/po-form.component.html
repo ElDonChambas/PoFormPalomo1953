@@ -118,9 +118,24 @@
         </div>
 
         <div *ngIf="category.isExpanded" class="p-4 bg-gray-50 flex flex-col gap-6 border-t border-gray-300">
-          <div *ngFor="let style of category.styles" class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
-            
-            <div class="flex gap-4">
+          
+          <div class="flex justify-center mb-2">
+            <div class="inline-flex bg-gray-200 rounded-lg p-1">
+              <button (click)="category.activeView = 'list'"
+                      [ngClass]="category.activeView === 'list' ? 'bg-white shadow-sm text-[#294337]' : 'text-gray-500 hover:text-gray-700'"
+                      class="px-5 py-2 rounded-md text-sm font-bold transition-all">
+                Price List
+              </button>
+              <button (click)="category.activeView = 'form'"
+                      [ngClass]="category.activeView === 'form' ? 'bg-white shadow-sm text-[#294337]' : 'text-gray-500 hover:text-gray-700'"
+                      class="px-5 py-2 rounded-md text-sm font-bold transition-all">
+                Purchase Order Form
+              </button>
+            </div>
+          </div>
+
+          <ng-container *ngIf="category.activeView === 'list'">
+            <div *ngFor="let style of category.styles" class="bg-white border border-gray-200 rounded-lg p-5 shadow-sm flex flex-col sm:flex-row gap-5">
               
               <div class="relative w-24 flex flex-col items-center shrink-0">
                 <div class="relative w-24 h-24 rounded-md border border-gray-200 overflow-hidden group bg-gray-100 flex items-center justify-center">
@@ -146,53 +161,104 @@
                 </span>
               </div>
               
-              <div class="flex flex-col justify-center">
-                <h3 class="text-lg leading-tight font-bold text-gray-800 mb-0.5">{{ style.styleName }}</h3>
+              <div class="flex flex-col justify-center w-full">
+                <h3 class="text-xl leading-tight font-bold text-gray-800 mb-2">{{ style.styleName }}</h3>
                 
-                <p *ngIf="style.description" class="text-xs text-gray-500 mb-2 leading-relaxed max-w-md italic">
-                  {{ style.description }}
-                </p>
+                <div class="flex items-center gap-5 mb-4 pb-3 border-b border-gray-100">
+                  <p class="text-[#294337] font-bold text-base">Wholesale: ${{ style.price }} USD</p>
+                  <p *ngIf="style.retailPrice" class="text-gray-500 font-medium text-sm">Retail Price: ${{ style.retailPrice }} USD</p>
+                </div>
                 
-                <p class="text-gray-600 font-medium text-sm mb-3">${{ style.price }} USD / pair</p>
-                
-                <div class="flex flex-wrap gap-2">
-                  <div *ngFor="let variant of style.variants" 
-                       (click)="variant.selected = !variant.selected"
-                       [style.backgroundColor]="variant.hexColor"
-                       [style.backgroundImage]="variant.swatchUrl ? 'url(' + variant.swatchUrl + ')' : null"
-                       class="w-7 h-7 rounded-full border border-gray-300 shadow-sm cursor-pointer transition-all bg-cover bg-center"
-                       [ngClass]="{
-                         'ring-2 ring-offset-2 ring-[#294337]': variant.selected, 
-                         'suede-texture': variant.isSuede && !variant.swatchUrl
-                       }"
-                       [title]="variant.colorName">
+                <div class="grid grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-3 mt-2 w-full">
+                  <div *ngFor="let variant of style.variants" class="flex items-center gap-3">
+                    
+                    <div [style.backgroundColor]="variant.hexColor"
+                         [style.backgroundImage]="variant.swatchUrl ? 'url(' + variant.swatchUrl + ')' : null"
+                         class="w-6 h-6 rounded-full border border-gray-300 shadow-sm bg-cover bg-center shrink-0"
+                         [ngClass]="{'suede-texture': variant.isSuede && !variant.swatchUrl}">
+                    </div>
+                    
+                    <span class="text-sm font-medium text-gray-700 truncate" [title]="variant.colorName">{{ variant.colorName }}</span>
+                    
                   </div>
                 </div>
+
               </div>
             </div>
+          </ng-container>
 
-            <div class="mt-4 flex flex-col gap-3">
-              <ng-container *ngFor="let variant of style.variants; let vIndex = index">
-                <div *ngIf="variant.selected" class="bg-gray-50 border border-gray-200 rounded-md p-3">
-                  <div class="flex items-center justify-between mb-2">
-                    <h4 class="font-bold text-sm text-gray-700 uppercase tracking-wider">{{ variant.colorName }}</h4>
+          <ng-container *ngIf="category.activeView === 'form'">
+            <div *ngFor="let style of category.styles" class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm">
+              <div class="flex gap-4">
+                
+                <div class="relative w-24 flex flex-col items-center shrink-0">
+                  <div class="relative w-24 h-24 rounded-md border border-gray-200 overflow-hidden group bg-gray-100 flex items-center justify-center">
+                    <img *ngIf="style.variants[getVariantIndex(category.categoryName, style.styleName)].imageUrl" 
+                         [src]="style.variants[getVariantIndex(category.categoryName, style.styleName)].imageUrl" 
+                         class="w-full h-full object-cover cursor-pointer hover:opacity-80 transition-opacity" 
+                         (click)="openModal(category.categoryName, style, getVariantIndex(category.categoryName, style.styleName))">
+                    
+                    <div *ngIf="!style.variants[getVariantIndex(category.categoryName, style.styleName)].imageUrl" 
+                         class="w-full h-full cursor-pointer flex items-center justify-center hover:bg-gray-200 transition-colors"
+                         (click)="openModal(category.categoryName, style, getVariantIndex(category.categoryName, style.styleName))">
+                      <span class="text-[10px] text-gray-400 text-center leading-tight">Palomo<br>1953</span>
+                    </div>
+                    
+                    <button *ngIf="style.variants.length > 1" (click)="prevVariant(category.categoryName, style.styleName, style.variants.length, $event)" 
+                            class="absolute left-0 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black text-white w-6 h-6 flex items-center justify-center rounded-r transition-colors">‹</button>
+                    <button *ngIf="style.variants.length > 1" (click)="nextVariant(category.categoryName, style.styleName, style.variants.length, $event)" 
+                            class="absolute right-0 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black text-white w-6 h-6 flex items-center justify-center rounded-l transition-colors">›</button>
                   </div>
+                  <span class="text-[10px] font-bold text-gray-500 uppercase mt-2 text-center leading-tight px-1">
+                    {{ style.variants[getVariantIndex(category.categoryName, style.styleName)].colorName }}
+                  </span>
+                </div>
+                
+                <div class="flex flex-col justify-center">
+                  <h3 class="text-lg leading-tight font-bold text-gray-800 mb-0.5">{{ style.styleName }}</h3>
+                  <p *ngIf="style.description" class="text-xs text-gray-500 mb-2 leading-relaxed max-w-md italic">{{ style.description }}</p>
+                  <p class="text-gray-600 font-medium text-sm mb-3">${{ style.price }} USD / pair</p>
                   
-                  <div class="grid grid-cols-4 min-[400px]:grid-cols-6 gap-1.5">
-                    <div *ngFor="let sizeOpt of variant.sizes; let sIndex = index" class="border border-gray-300 bg-white rounded flex flex-col items-center justify-center p-1.5 shadow-sm">
-                      <span class="text-[11px] font-bold text-gray-500 leading-none mb-1.5">Sz {{ sizeOpt.size }}</span>
-                      <div class="flex items-center justify-between w-full">
-                        <button (click)="updateQty(variant, sIndex, -1)" class="w-6 h-6 bg-gray-100 hover:bg-gray-200 rounded flex items-center justify-center text-gray-600 font-bold leading-none transition-colors">-</button>
-                        <span class="text-xs font-bold text-gray-800">{{ sizeOpt.quantity }}</span>
-                        <button (click)="updateQty(variant, sIndex, 1)" class="w-6 h-6 bg-gray-100 hover:bg-gray-200 rounded flex items-center justify-center text-gray-600 font-bold leading-none transition-colors">+</button>
-                      </div>
+                  <div class="flex flex-wrap gap-2">
+                    <div *ngFor="let variant of style.variants" 
+                         (click)="variant.selected = !variant.selected"
+                         [style.backgroundColor]="variant.hexColor"
+                         [style.backgroundImage]="variant.swatchUrl ? 'url(' + variant.swatchUrl + ')' : null"
+                         class="w-7 h-7 rounded-full border border-gray-300 shadow-sm cursor-pointer transition-all bg-cover bg-center"
+                         [ngClass]="{
+                           'ring-2 ring-offset-2 ring-[#294337]': variant.selected, 
+                           'suede-texture': variant.isSuede && !variant.swatchUrl
+                         }"
+                         [title]="variant.colorName">
                     </div>
                   </div>
                 </div>
-              </ng-container>
-            </div>
+              </div>
 
-          </div>
+              <div class="mt-4 flex flex-col gap-3">
+                <ng-container *ngFor="let variant of style.variants; let vIndex = index">
+                  <div *ngIf="variant.selected" class="bg-gray-50 border border-gray-200 rounded-md p-3">
+                    <div class="flex items-center justify-between mb-2">
+                      <h4 class="font-bold text-sm text-gray-700 uppercase tracking-wider">{{ variant.colorName }}</h4>
+                    </div>
+                    
+                    <div class="grid grid-cols-4 min-[400px]:grid-cols-6 gap-1.5">
+                      <div *ngFor="let sizeOpt of variant.sizes; let sIndex = index" class="border border-gray-300 bg-white rounded flex flex-col items-center justify-center p-1.5 shadow-sm">
+                        <span class="text-[11px] font-bold text-gray-500 leading-none mb-1.5">Sz {{ sizeOpt.size }}</span>
+                        <div class="flex items-center justify-between w-full">
+                          <button (click)="updateQty(variant, sIndex, -1)" class="w-6 h-6 bg-gray-100 hover:bg-gray-200 rounded flex items-center justify-center text-gray-600 font-bold leading-none transition-colors">-</button>
+                          <span class="text-xs font-bold text-gray-800">{{ sizeOpt.quantity }}</span>
+                          <button (click)="updateQty(variant, sIndex, 1)" class="w-6 h-6 bg-gray-100 hover:bg-gray-200 rounded flex items-center justify-center text-gray-600 font-bold leading-none transition-colors">+</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-container>
+              </div>
+
+            </div>
+          </ng-container>
+
         </div>
       </div>
     </div>
