@@ -373,7 +373,8 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Savile Loafer Cordovan Bourbon',
-          price: 523.50,
+          price: 0,
+          retailPrice: 0,
           description: '',
           variants: [
             { id: 'new-savile-cordovan-bourbon', colorName: 'Cordovan Bourbon', hexColor: '#3A2411', imageUrl: '/productos/new-savile/new-savile-cordovan.webp', sizes: this.generateSizes() },
@@ -402,7 +403,8 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Antibes Loafer',
-          price: 124,
+          price: 125,
+          retailPrice: 250,
           description: '',
           variants: [
             { id: 'new-antibes-chesnut-suede', colorName: 'Chesnut Suede', hexColor: '#887152', imageUrl: '/productos/new-antibes/new-antibes-chesnut-suede.webp', sizes: this.generateSizes(), isSuede : true },
