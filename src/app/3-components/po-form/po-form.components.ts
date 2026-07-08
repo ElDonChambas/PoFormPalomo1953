@@ -178,7 +178,8 @@ export class PoFormComponent implements OnInit {
       styles: [
         {
           styleName: 'Edmund Plain Toe Boot',
-          price: 90,
+          price: 125,
+          retailPrice: 250,
           description: '',
           variants: [
             { id: 'green-edmund-black', colorName: 'Black Waxy Leather', hexColor: '#1a1a1a', imageUrl: '/productos/green-edmund/green-edmund-black.webp', sizes: this.generateSizes() },
@@ -188,7 +189,8 @@ export class PoFormComponent implements OnInit {
         }, 
         {
           styleName: 'Ernest Cap Toe Boot',
-          price: 90,
+          price: 125,
+          retailPrice: 250,
           description: '',
           variants: [
             { id: 'green-ernest-black', colorName: 'Black Waxy Leather', hexColor: '#1a1a1a', imageUrl: '/productos/green-ernest/green-ernest-black.webp', sizes: this.generateSizes() },
@@ -200,7 +202,8 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Sherman Chelsea Boot',
-          price: 90,
+          price: 125,
+          retailPrice: 250,
           description: '',
           variants: [
             { id: 'green-sherman-black', colorName: 'Black Waxy Leather', hexColor: '#1a1a1a', imageUrl: '/productos/green-sherman/green-sherman-black.webp', sizes: this.generateSizes() },
@@ -212,7 +215,8 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Yukon Ranger Boot',
-          price: 90,
+          price: 125,
+          retailPrice: 250,
           description: '',
           variants: [
             { id: 'green-yukon-black', colorName: 'Black Waxy Leather', hexColor: '#1a1a1a', imageUrl: '/productos/green-yukon/green-yukon-black.webp', sizes: this.generateSizes() },
@@ -222,7 +226,8 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Vermont Camp Lug',
-          price: 80,
+          price: 100,
+          retailPrice: 200,
           description: '',
           variants: [
             { id: 'green-vermont-Natural', colorName: 'Natural Waxy Leather', hexColor: '#A1866B', imageUrl: '/productos/green-vermont/green-vermont-natural.webp', sizes: this.generateSizes() },
@@ -231,7 +236,8 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Acadia Camp Moc',
-          price: 70,
+          price: 90,
+          retailPrice: 180,
           description: '',
           variants: [
             { id: 'green-acadia-natural', colorName: 'Natural Waxy Leather', hexColor: '#A1866B', imageUrl: '/productos/green-acadia/green-acadia-natural.webp', sizes: this.generateSizes() },
@@ -240,7 +246,8 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'PALOMO® Loafer',
-          price: 70,
+          price: 90,
+          retailPrice: 180,
           description: '',
           variants: [
             { id: 'green-penny-black', colorName: 'Black Moc', hexColor: '#1a1a1a', imageUrl: '/productos/green-penny/green-penny-black.webp', sizes: this.generateSizes() },
@@ -252,28 +259,37 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Savile Loafer',
-          price: 125,
-          retailPrice: 250,
+          price: 100,
+          retailPrice: 200,
           description: '',
           variants: [
-            { id: 'new-savile-garnet-horween', colorName: 'Garnet Horween', hexColor: '#4D2E21', imageUrl: '/productos/new-savile/new-savile-garnet.webp', sizes: this.generateSizes() },
-            { id: 'new-savile-noir-horween', colorName: 'Noir Horween', hexColor: '#1a1a1a', imageUrl: '/productos/new-savile/new-savile-noir-horween.webp', sizes: this.generateSizes() },
+            { id: 'new-savile-garnet-horween', colorName: 'Garnet', hexColor: '#4D2E21', imageUrl: '/productos/new-savile/new-savile-garnet.webp', sizes: this.generateSizes() },
+            { id: 'new-savile-noir-horween', colorName: 'Noir', hexColor: '#1a1a1a', imageUrl: '/productos/new-savile/new-savile-noir-horween.webp', sizes: this.generateSizes() },
           ]
         },
         {
           styleName: 'Columbus Boat Shoe',
-          description: '• Genuine Leather / Genuine Suede / Genuine Lefarc® • Full Tubular Boat Shoe • Handsewn with Waxed Handsewn Thread • Full Leather Lining',
-          price: 86,
-          retailPrice: 165,
+          description: '• Genuine Leather / Genuine Lefarc® • Full Tubular Boat Shoe • Handsewn with Waxed Handsewn Thread • Full Leather Lining',
+          price: 90,
+          retailPrice: 180,
           variants: [
             { id: 'gold-columbus-blue', colorName: 'Deep Blue Grain', hexColor: '#403B5B', imageUrl: '/productos/gold-columbus/gold-columbus-blue.webp', sizes: this.generateSizes() },
-            { id: 'gold-columbus-green', colorName: 'Hunter Green', hexColor: '#5D5B31', imageUrl: '/productos/gold-columbus/gold-columbus-green.webp', sizes: this.generateSizes(), isSuede: true },
             { id: 'gold-columbus-natural', colorName: 'Natural', hexColor: '#A1866B', imageUrl: '/productos/gold-columbus/gold-columbus-natural.webp', sizes: this.generateSizes() },
           ]
         },
         {
+          styleName: 'Columbus Boat Shoe',
+          description: '• Genuine Suede • Full Tubular Boat Shoe • Handsewn with Waxed Handsewn Thread • Full Leather Lining',
+          price: 82.50,
+          retailPrice: 165,
+          variants: [
+            { id: 'gold-columbus-green', colorName: 'Hunter Green', hexColor: '#5D5B31', imageUrl: '/productos/gold-columbus/gold-columbus-green.webp', sizes: this.generateSizes(), isSuede: true },
+          ]
+        },
+        {
           styleName: 'Lola Loafer Woman',
-          price: 86,
+          price: 90,
+          retailPrice: 180,
           description: '',
           variants: [
             { id: 'green-lola-black', colorName: 'Black Moc', hexColor: '#1a1a1a', imageUrl: '/productos/green-lola/green-lola-black.webp', sizes: this.generateSizes() },
@@ -285,10 +301,19 @@ export class PoFormComponent implements OnInit {
         },
         {
           styleName: 'Paloma Boat Shoe',
-          price: 65,
+          price: 82.50,
+          retailPrice: 165,
           description: '',
           variants: [
             { id: 'green-paloma-green', colorName: 'Hunter Green', hexColor: '#5D5B31', imageUrl: '/productos/green-paloma/green-paloma-hunter-green.webp', sizes: this.generateSizes(), isSuede: true },
+          ]
+        },
+        {
+          styleName: 'Paloma Boat Shoe',
+          price: 90,
+          retailPrice: 180,
+          description: '',
+          variants: [
             { id: 'green-paloma-sand', colorName: 'Sand', hexColor: '#B1AC8E', imageUrl: '/productos/green-paloma/green-paloma-sand.webp', sizes: this.generateSizes() },
           ]
         },
