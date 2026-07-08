@@ -32,7 +32,10 @@ export class PoFormComponent implements OnInit {
   activeVariantIndices: { [styleName: string]: number } = {};
 
   customer: CustomerInfo = {
-    companyName: '', contactName: '', email: '', phone: '', city: '', country: '', billingAddress: '', shippingAddress: ''
+    billingCompany: '', billingAddress: '', billingEmail: '', billingPhone: '', taxId: '',
+    sameAsBilling: true, // Lo dejamos en true por defecto para mayor comodidad del cliente
+    shippingCompany: '', shippingAddress: '', shippingEmail: '', shippingPhone: '', deliveryDetails: '',
+    additionalComments: '', earliestDelivery: '', latestDelivery: ''
   };
 
   ngOnInit() {
@@ -46,6 +49,7 @@ export class PoFormComponent implements OnInit {
   categories: ProductCategory[] = [
     {categoryName: 'Heartland Collection',
       description: 'Our Premium & Handcrafted Collection',
+      isExpanded: true,
       styles: [
         {
           styleName: 'Edmund Plain Toe Boot',
@@ -166,6 +170,7 @@ export class PoFormComponent implements OnInit {
     },
     {categoryName: 'Core Collection',
       description: 'Everyday Classic Essentials',
+      isExpanded: true,
       styles: [
         {
           styleName: 'Edmund Plain Toe Boot',
@@ -266,6 +271,7 @@ export class PoFormComponent implements OnInit {
     },
     {categoryName: 'SS27 Collection',
       description: 'New collection just for you.',
+      isExpanded: true,
       styles: [
         {
           styleName: 'Newport Boat Shoe',
@@ -560,25 +566,38 @@ export class PoFormComponent implements OnInit {
   submitOrder() {
     const c = this.customer;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
-    const phoneRegex = /^[0-9\+\-\s]+$/; 
 
-    if (!c.companyName || !c.contactName || !c.email || !c.phone || !c.city || !c.country || !c.billingAddress || !c.shippingAddress) {
-      alert('Please fill out all Billing & Shipping Information before submitting.');
+    // Validar Billing
+    if (!c.billingCompany || !c.billingAddress || !c.billingEmail || !c.billingPhone || !c.taxId) {
+      alert('Please fill out all Billing Information.');
+      return;
+    }
+    if (!emailRegex.test(c.billingEmail)) {
+      alert('Please enter a valid billing email address.');
       return;
     }
 
-    if (!emailRegex.test(c.email)) {
-      alert('Please enter a valid email address.');
-      return;
+    // Validar Shipping (Solo si no son los mismos)
+    if (!c.sameAsBilling) {
+      if (!c.shippingCompany || !c.shippingAddress || !c.shippingEmail || !c.shippingPhone) {
+        alert('Please fill out all Shipping Information.');
+        return;
+      }
+      if (!emailRegex.test(c.shippingEmail)) {
+        alert('Please enter a valid shipping email address.');
+        return;
+      }
+    } else {
+      // Magia: Si es igual a Billing, clonamos los datos justo antes de enviarlos
+      // para que a tu Google Sheets lleguen completos sin que el cliente trabaje doble
+      c.shippingCompany = c.billingCompany;
+      c.shippingAddress = c.billingAddress;
+      c.shippingEmail = c.billingEmail;
+      c.shippingPhone = c.billingPhone;
     }
 
-    if (!phoneRegex.test(c.phone)) {
-      alert('Please enter a valid phone number (numbers only).');
-      return;
-    }
-
+    // Validar Productos
     const orderedProducts: Product[] = [];
-    
     for (const cat of this.categories) {
       for (const style of cat.styles) {
         for (const variant of style.variants) {

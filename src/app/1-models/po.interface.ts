@@ -25,17 +25,31 @@ export interface ProductCategory {
   categoryName: string;
   description: string;
   styles: ProductStyle[];
+  isExpanded?: boolean;
 }
 
 export interface CustomerInfo {
-  companyName: string;
-  contactName: string;
-  email: string;
-  phone: string;
-  city: string;
-  country: string;
+  // Billing
+  billingCompany: string;
   billingAddress: string;
+  billingEmail: string;
+  billingPhone: string;
+  taxId: string;
+
+  // Control del Checkbox
+  sameAsBilling: boolean;
+
+  // Shipping
+  shippingCompany: string;
   shippingAddress: string;
+  shippingEmail: string;
+  shippingPhone: string;
+  deliveryDetails: string;
+
+  // Extras
+  additionalComments: string;
+  earliestDelivery: string;
+  latestDelivery: string;
 }
 
 // La estructura plana que espera enviar tu GoogleSheetsService
