@@ -17,6 +17,7 @@ export interface ProductVariant {
 export interface ProductStyle {
   styleName: string;
   price: number;
+  description: string;
   variants: ProductVariant[];
 }
 

@@ -9,22 +9,10 @@
     
     <div class="text-center mb-8 border-b pb-4">
       <img src="logo/logo.png" alt="Brand Logo" class="mx-auto mb-4 object-contain h-16">
-      <h1 class="text-2xl font-bold text-gray-800">Purchase Order Form</h1>
+      <h1 class="text-2xl font-bold text-gray-800">Purchase Order Form USA</h1>
     </div>
 
-    <div class="mb-8">
-      <h2 class="text-xl font-semibold mb-4 text-gray-700">Billing & Shipping Information</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <input type="text" [(ngModel)]="customer.companyName" placeholder="Company Name" class="w-full p-2 border rounded focus:ring-2 focus:ring-gray-400 outline-none">
-        <input type="text" [(ngModel)]="customer.contactName" placeholder="Contact Name" class="w-full p-2 border rounded focus:ring-2 focus:ring-gray-400 outline-none">
-        <input type="email" [(ngModel)]="customer.email" placeholder="Email Address" class="w-full p-2 border rounded focus:ring-2 focus:ring-gray-400 outline-none">
-        <input type="text" [(ngModel)]="customer.phone" placeholder="Phone Number" class="w-full p-2 border rounded focus:ring-2 focus:ring-gray-400 outline-none">
-        <input type="text" [(ngModel)]="customer.city" placeholder="City" class="w-full p-2 border rounded focus:ring-2 focus:ring-gray-400 outline-none">
-        <input type="text" [(ngModel)]="customer.country" placeholder="Country" class="w-full p-2 border rounded focus:ring-2 focus:ring-gray-400 outline-none">
-        <textarea [(ngModel)]="customer.billingAddress" placeholder="Billing Address" class="w-full p-2 border rounded focus:ring-2 focus:ring-gray-400 outline-none"></textarea>
-        <textarea [(ngModel)]="customer.shippingAddress" placeholder="Shipping Address" class="w-full p-2 border rounded focus:ring-2 focus:ring-gray-400 outline-none"></textarea>
-      </div>
-    </div>
+    
 
     <div class="mb-8">
       <h2 class="text-2xl font-bold mb-4 text-gray-800 border-b-2 border-[#294337] inline-block pb-1">Select Products & Quantities</h2>
@@ -73,7 +61,12 @@
               </div>
               
               <div class="flex flex-col justify-center">
-                <h3 class="text-lg leading-tight font-bold text-gray-800 mb-1">{{ style.styleName }}</h3>
+                <h3 class="text-lg leading-tight font-bold text-gray-800 mb-0.5">{{ style.styleName }}</h3>
+                
+                <p *ngIf="style.description" class="text-xs text-gray-500 mb-2 leading-relaxed max-w-md italic">
+                  {{ style.description }}
+                </p>
+                
                 <p class="text-gray-600 font-medium text-sm mb-3">${{ style.price }} USD / pair</p>
                 
                 <div class="flex flex-wrap gap-2">
@@ -149,12 +142,28 @@
       </div>
     </div>
 
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-4 text-gray-700">Billing & Shipping Information</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <input type="text" [(ngModel)]="customer.companyName" placeholder="Company Name" class="w-full p-2 border rounded focus:ring-2 focus:ring-gray-400 outline-none">
+        <input type="text" [(ngModel)]="customer.contactName" placeholder="Contact Name" class="w-full p-2 border rounded focus:ring-2 focus:ring-gray-400 outline-none">
+        <input type="email" [(ngModel)]="customer.email" placeholder="Email Address" class="w-full p-2 border rounded focus:ring-2 focus:ring-gray-400 outline-none">
+        <input type="text" [(ngModel)]="customer.phone" placeholder="Phone Number" class="w-full p-2 border rounded focus:ring-2 focus:ring-gray-400 outline-none">
+        <input type="text" [(ngModel)]="customer.city" placeholder="City" class="w-full p-2 border rounded focus:ring-2 focus:ring-gray-400 outline-none">
+        <input type="text" [(ngModel)]="customer.country" placeholder="Country" class="w-full p-2 border rounded focus:ring-2 focus:ring-gray-400 outline-none">
+        <textarea [(ngModel)]="customer.billingAddress" placeholder="Billing Address" class="w-full p-2 border rounded focus:ring-2 focus:ring-gray-400 outline-none"></textarea>
+        <textarea [(ngModel)]="customer.shippingAddress" placeholder="Shipping Address" class="w-full p-2 border rounded focus:ring-2 focus:ring-gray-400 outline-none"></textarea>
+      </div>
+    </div>
+
     <button (click)="submitOrder()" [disabled]="isLoading" 
             class="w-full bg-[#294337] text-white font-bold py-4 rounded hover:opacity-90 transition disabled:bg-gray-400 disabled:cursor-not-allowed">
       {{ isLoading ? 'PROCESSING...' : 'SUBMIT PURCHASE ORDER' }}
     </button>
     
   </div>
+
+  
 
   <div class="mt-12 mb-4 text-center">
       <p class="text-xs text-gray-400">
