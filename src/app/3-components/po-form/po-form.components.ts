@@ -251,6 +251,16 @@ export class PoFormComponent implements OnInit {
           ]
         },
         {
+          styleName: 'Savile Loafer',
+          price: 125,
+          retailPrice: 250,
+          description: '',
+          variants: [
+            { id: 'new-savile-garnet-horween', colorName: 'Garnet Horween', hexColor: '#4D2E21', imageUrl: '/productos/new-savile/new-savile-garnet.webp', sizes: this.generateSizes() },
+            { id: 'new-savile-noir-horween', colorName: 'Noir Horween', hexColor: '#1a1a1a', imageUrl: '/productos/new-savile/new-savile-noir-horween.webp', sizes: this.generateSizes() },
+          ]
+        },
+        {
           styleName: 'Columbus Boat Shoe',
           description: '• Genuine Leather / Genuine Suede / Genuine Lefarc® • Full Tubular Boat Shoe • Handsewn with Waxed Handsewn Thread • Full Leather Lining',
           price: 86,
@@ -306,7 +316,17 @@ export class PoFormComponent implements OnInit {
           description: '',
           variants: [
             { id: 'new-sherman-deser-tan', colorName: 'Desert Tan', hexColor: '#CDAE6D', imageUrl: '/productos/new-spring-sherman/new-sherman-repello-autum.webp', sizes: this.generateSizes(), isSuede: true },
+            { id: 'new-sherman-fawn-suede', colorName: 'Fawn Suede', hexColor: '#ECE9D6', imageUrl: '/productos/new-spring-sherman/new-sherman-fawn-suede.webp', sizes: this.generateSizes(), isSuede : true },
           ]
+        },
+        {
+          styleName: 'Ernest Cap Toe Boot',
+          price: 175,
+          retailPrice: 350,
+          description: '',
+          variants: [
+            { id: 'new-ernest-fawn-suede', colorName: 'Fawn Suede', hexColor: '#ECE9D6', imageUrl: '/productos/new-spring-edmund/new-edmund-fawn-suede.webp', sizes: this.generateSizes(), isSuede : true },
+          ] //FOTO INCORRECTA PARA MIENTRAS
         },
         {
           styleName: 'Sahara Desert Boot',
@@ -349,16 +369,6 @@ export class PoFormComponent implements OnInit {
             { id: 'new-tahoe-onyx-glove', colorName: 'Onyx Glove', hexColor: '#1A1A1A', imageUrl: '/productos/new-tahoe/new-tahoe-onyx.webp', sizes: this.generateSizes() },
             { id: 'new-tahoe-salt&pepper', colorName: 'Salt & Pepper Pony Hair', hexColor: '#FFFFFF', imageUrl: '/productos/new-tahoe/new-tahoe-saltpepper.webp', swatchUrl: '/swatches/salt-pepper.webp', sizes: this.generateSizes(), isSuede : true },
             { id: 'new-tahoe-tortoise', colorName: 'Tortoise Pony Hair', hexColor: '#B2702B', imageUrl: '/productos/new-tahoe/new-tahoe-tortoise.webp', swatchUrl: '/swatches/tortoise.webp', sizes: this.generateSizes() },
-          ]
-        },
-        {
-          styleName: 'Savile Loafer',
-          price: 125,
-          retailPrice: 250,
-          description: '',
-          variants: [
-            { id: 'new-savile-garnet-horween', colorName: 'Garnet Horween', hexColor: '#4D2E21', imageUrl: '/productos/new-savile/new-savile-garnet.webp', sizes: this.generateSizes() },
-            { id: 'new-savile-noir-horween', colorName: 'Noir Horween', hexColor: '#1a1a1a', imageUrl: '/productos/new-savile/new-savile-noir-horween.webp', sizes: this.generateSizes() },
           ]
         },
         {
@@ -417,7 +427,7 @@ export class PoFormComponent implements OnInit {
           description: '',
           variants: [
             { id: 'new-edmund-fawn-suede', colorName: 'Fawn Suede', hexColor: '#ECE9D6', imageUrl: '/productos/new-spring-edmund/new-edmund-fawn-suede.webp', sizes: this.generateSizes(), isSuede : true },
-            { id: 'new-edmund-repello-autum', colorName: 'Repello Calf Autum Gold', hexColor: '#B2702B', imageUrl: '/productos/new-spring-edmund/new-edmund-repello-autum.webp', sizes: this.generateSizes(), isSuede : true },
+            { id: 'new-edmund-repello-autum', colorName: 'Autum Calf Gold', hexColor: '#B2702B', imageUrl: '/productos/new-spring-edmund/new-edmund-repello-autum.webp', sizes: this.generateSizes(), isSuede : true },
           ]
         },
 /*
@@ -471,6 +481,7 @@ export class PoFormComponent implements OnInit {
           description: '',
           variants: [
             { id: 'new-duck-boot', colorName: 'Whiskey', hexColor: '#70554A', imageUrl: '/productos/new-duck-boot/new-duck-boot.webp', sizes: this.generateSizes(), swatchUrl: '/swatches/duckBoot.webp' },
+            { id: 'new-duck-boot', colorName: 'Eagle Cuoio', hexColor: '#70554A', imageUrl: '/productos/new-duck-boot/new-duck-boot.webp', sizes: this.generateSizes(), swatchUrl: '/swatches/duckBoot.webp' },
           ]
         },
       ]
