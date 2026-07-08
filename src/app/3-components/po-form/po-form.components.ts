@@ -264,7 +264,7 @@ export class PoFormComponent implements OnInit {
         },
       ]
     },
-    {categoryName: 'Atlas Label',
+    {categoryName: 'SS27 Collection',
       description: 'New collection just for you.',
       styles: [
         {
