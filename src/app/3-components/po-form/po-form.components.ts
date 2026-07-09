@@ -167,7 +167,16 @@ export class PoFormComponent implements OnInit {
             { id: 'gold-james-waxypullup', colorName: 'Cacao Waxy Pull-up', hexColor: '#4D3B37', imageUrl: '/productos/gold-james/gold-james-waxy.webp', sizes: this.generateSizes() },
           ]
         },
-        
+        {
+          styleName: 'Drake Leather Boot',
+          price: 175,
+          retailPrice: 350,
+          description: '',
+          variants: [
+            { id: 'new-duck-boot', colorName: 'Whiskey', hexColor: '#70554A', imageUrl: '/productos/new-duck-boot/new-duck-boot.webp', sizes: this.generateSizes(), swatchUrl: '/swatches/duckBoot.webp' },
+            { id: 'new-duck-boot', colorName: 'Eagle Cuoio', hexColor: '#70554A', imageUrl: '/productos/new-duck-boot/new-duck-boot.webp', sizes: this.generateSizes(), swatchUrl: '/swatches/duckBoot.webp' },
+          ]
+        },
       ]
     },
 
@@ -278,7 +287,7 @@ export class PoFormComponent implements OnInit {
           ]
         },
         {
-          styleName: 'Columbus Boat Shoe',
+          styleName: 'Columbus Boat Shoe Hunter Green',
           description: '• Genuine Suede • Full Tubular Boat Shoe • Handsewn with Waxed Handsewn Thread • Full Leather Lining',
           price: 82.50,
           retailPrice: 165,
@@ -286,6 +295,7 @@ export class PoFormComponent implements OnInit {
             { id: 'gold-columbus-green', colorName: 'Hunter Green', hexColor: '#5D5B31', imageUrl: '/productos/gold-columbus/gold-columbus-green.webp', sizes: this.generateSizes(), isSuede: true },
           ]
         },
+/*
         {
           styleName: 'Lola Loafer Woman',
           price: 90,
@@ -317,6 +327,7 @@ export class PoFormComponent implements OnInit {
             { id: 'green-paloma-sand', colorName: 'Sand', hexColor: '#B1AC8E', imageUrl: '/productos/green-paloma/green-paloma-sand.webp', sizes: this.generateSizes() },
           ]
         },
+*/
       ]
     },
     {categoryName: 'SS27 Collection',
@@ -324,6 +335,90 @@ export class PoFormComponent implements OnInit {
       isExpanded: false,
       activeView: 'list',
       styles: [
+        {
+          styleName: 'Capri Loafer',
+          price: 165,
+          retailPrice: 325,
+          description: '',
+          variants: [
+            { id: 'new-capri-black', colorName: 'Capri Black', hexColor: '#1a1a1a', imageUrl: '/productos/new-capri/new-capri-black.webp', sizes: this.generateSizes() },
+            { id: 'new-capri-cognac', colorName: 'Capri Cognac', hexColor: '#3F372E', imageUrl: '/productos/new-capri/new-capri-cognac.webp', sizes: this.generateSizes()},
+          ]
+        },
+        {
+          styleName: 'PALOMO® Loafer Woven',
+          price: 150,
+          retailPrice: 300,
+          description: '',
+          variants: [
+            { id: 'new-baja-terra-suede', colorName: 'Terra Suede', hexColor: '#887152', imageUrl: '/productos/new-baja/new-baja-terra-suede.webp', sizes: this.generateSizes(), isSuede : true },
+            { id: 'new-baja-midnight-suede', colorName: 'Midnight Suede', hexColor: '#323B48', imageUrl: '/productos/new-baja/new-baja-midnight-suede.webp', sizes: this.generateSizes(), isSuede : true },
+            { id: 'new-baja-oyster-suede', colorName: 'Oyster Suede', hexColor: '#79460E', imageUrl: '/productos/new-baja/new-baja-oyster-suede.webp', sizes: this.generateSizes(), isSuede : true },
+          ]
+        },
+        {
+          styleName: 'PALOMO® Loafer',
+          price: 125,
+          retailPrice: 250,
+          description: '',
+          variants: [
+            { id: 'new-antibes-chesnut-suede', colorName: 'Chesnut Suede', hexColor: '#887152', imageUrl: '/productos/new-antibes/new-antibes-chesnut-suede.webp', sizes: this.generateSizes(), isSuede : true },
+            { id: 'new-antibes-stucco-velour', colorName: 'Stucco Velour', hexColor: '#B1AC8E', imageUrl: '/productos/new-antibes/new-antibes-stucco-velour.webp', sizes: this.generateSizes(), isSuede : true },
+            { id: 'new-antibes-slate-blue', colorName: 'Slate Blue Suede', hexColor: '#323B48', imageUrl: '/productos/new-antibes/new-antibes-slate-blue.webp', sizes: this.generateSizes(), isSuede : true },
+          ]
+        },
+        {
+          styleName: 'Mallorca Summer Loafer',
+          price: 112.50,
+          retailPrice: 225,
+          description: '',
+          variants: [
+            { id: 'new-mallorca-ivory-velour', colorName: 'Ivory Velour', hexColor: '#ECE9D6', imageUrl: '/productos/new-ibiza/new-ibiza-ivory.webp', sizes: this.generateSizes(), isSuede : true },
+            { id: 'new-mallorca-autum-gold', colorName: 'Autum Calf Gold', hexColor: '#6B4424', imageUrl: '/productos/new-ibiza/new-ibiza-autum-gold.webp', sizes: this.generateSizes(), isSuede : true },
+          ]
+        },
+        {
+          styleName: 'Menorca Summer Penny Loafer',
+          price: 112.50,
+          retailPrice: 225,
+          description: '',
+          variants: [
+            { id: 'new-amalfi-slate-blue', colorName: 'Slate Blue Suede', hexColor: '#1C3240', imageUrl: '/productos/new-ibiza/new-ibiza-slate-blue.webp', sizes: this.generateSizes(), isSuede : true },
+            { id: 'new-amalfi-chestnut', colorName: 'Chestnut Suede', hexColor: '#4D2E21', imageUrl: '/productos/new-ibiza/new-ibiza-chestnut-suede.webp', sizes: this.generateSizes(), isSuede : true },
+            { id: 'new-amalfi-asparagus', colorName: 'Asparagus', hexColor: '#5D5B31', imageUrl: '/productos/new-ibiza/new-ibiza-asparagus.webp', sizes: this.generateSizes(), isSuede : true },
+          ]
+        },
+        {
+          styleName: 'Ponza Venetian',
+          price: 162.50,
+          retailPrice: 325,
+          description: '',
+          variants: [
+            { id: 'new-ponza-stucco-velour', colorName: 'Stucco Velour', hexColor: '#BF9E4F', imageUrl: '/productos/new-ponza/new-ponza-stucco-velour.webp', sizes: this.generateSizes(), isSuede : true },
+            { id: 'new-ponza-espresso-leather', colorName: 'Espresso Leather', hexColor: '#301D11', imageUrl: '/productos/new-ponza/new-ponza-espresso.webp', sizes: this.generateSizes(), isSuede : true },
+            { id: 'new-ponza-noir-leather', colorName: 'Noir Leather', hexColor: '#1A1A1A', imageUrl: '/productos/new-ponza/new-ponza-noir-leather.webp', sizes: this.generateSizes() },
+            { id: 'new-ponza-ink-navy-suede', colorName: 'Ink Navy Suede', hexColor: '#323B48', imageUrl: '/productos/new-ponza/new-ponza-ink-navy-suede.webp', sizes: this.generateSizes(), isSuede : true},
+          ]
+        },
+        {
+          styleName: 'Ischia Mule',
+          price: 97.50,
+          retailPrice: 195,
+          variants: [
+            { id: 'new-ischia-noir-leather', colorName: 'Noir Leather', hexColor: '#1a1a1a', imageUrl: '/productos/new-ischia/new-ischia-noir-leather.webp', sizes: this.generateSizes() },
+            { id: 'new-ischia-tundra-suede', colorName: 'Tundra Suede', hexColor: '#887152', imageUrl: '/productos/new-ischia/new-ischia-tundra-suede.webp', sizes: this.generateSizes(), isSuede : true },
+          ]
+        },
+        {
+          styleName: 'Portofino Driving Moc',
+          price: 97.50,
+          retailPrice: 195,
+          description: '',
+          variants: [
+            { id: 'new-portofino-toasted-velour', colorName: 'Toasted Velour', hexColor: '#6B4424', imageUrl: '/productos/new-portofino/new-portofino-toasted-velour.webp', sizes: this.generateSizes(), isSuede : true },
+            { id: 'new-portofino-fox-brown.velour', colorName: 'Fox Brown Velour', hexColor: '#4D2E21', imageUrl: '/productos/new-portofino/new-portofino-fox-brown-velour.webp', sizes: this.generateSizes(), isSuede : true },
+          ]
+        },
         {
           styleName: 'Newport Boat Shoe',
           price: 125,
@@ -354,6 +449,16 @@ export class PoFormComponent implements OnInit {
           ] //FOTO INCORRECTA PARA MIENTRAS
         },
         {
+          styleName: 'Edmund Plain Toe Boot',
+          price: 175,
+          retailPrice: 350,
+          description: '',
+          variants: [
+            { id: 'new-edmund-fawn-suede', colorName: 'Fawn Suede', hexColor: '#ECE9D6', imageUrl: '/productos/new-spring-edmund/new-edmund-fawn-suede.webp', sizes: this.generateSizes(), isSuede : true },
+            { id: 'new-edmund-repello-autum', colorName: 'Autum Calf Gold', hexColor: '#B2702B', imageUrl: '/productos/new-spring-edmund/new-edmund-repello-autum.webp', sizes: this.generateSizes(), isSuede : true },
+          ]
+        },
+        {
           styleName: 'Sahara Desert Boot',
           price: 162.50,
           retailPrice: 325,
@@ -362,25 +467,6 @@ export class PoFormComponent implements OnInit {
             { id: 'new-sahara-olive', colorName: 'Olive Suede', hexColor: '#6E5F41', imageUrl: '/productos/new-sahara/new-sahara-olive.webp', sizes: this.generateSizes(), isSuede: true },
             { id: 'new-sahara-cognac', colorName: 'Cognac Suede', hexColor: '#79460E', imageUrl: '/productos/new-sahara/new-sahara-cognac.webp', sizes: this.generateSizes(), isSuede: true },
             { id: 'new-sahara-jet-black', colorName: 'Jet Black Leather', hexColor: '#1A1A1A', imageUrl: '/productos/new-sahara/new-sahara-jet-black.webp', sizes: this.generateSizes() },
-          ]
-        },
-        {
-          styleName: 'Ischia Mule',
-          price: 97.50,
-          retailPrice: 195,
-          variants: [
-            { id: 'new-ischia-noir-leather', colorName: 'Noir Leather', hexColor: '#1a1a1a', imageUrl: '/productos/new-ischia/new-ischia-noir-leather.webp', sizes: this.generateSizes() },
-            { id: 'new-ischia-tundra-suede', colorName: 'Tundra Suede', hexColor: '#887152', imageUrl: '/productos/new-ischia/new-ischia-tundra-suede.webp', sizes: this.generateSizes(), isSuede : true },
-          ]
-        },
-        {
-          styleName: 'Portofino Driving Moc',
-          price: 97.50,
-          retailPrice: 195,
-          description: '',
-          variants: [
-            { id: 'new-portofino-toasted-velour', colorName: 'Toasted Velour', hexColor: '#6B4424', imageUrl: '/productos/new-portofino/new-portofino-toasted-velour.webp', sizes: this.generateSizes(), isSuede : true },
-            { id: 'new-portofino-fox-brown.velour', colorName: 'Fox Brown Velour', hexColor: '#4D2E21', imageUrl: '/productos/new-portofino/new-portofino-fox-brown-velour.webp', sizes: this.generateSizes(), isSuede : true },
           ]
         },
         {
@@ -396,6 +482,7 @@ export class PoFormComponent implements OnInit {
             { id: 'new-tahoe-tortoise', colorName: 'Tortoise Pony Hair', hexColor: '#B2702B', imageUrl: '/productos/new-tahoe/new-tahoe-tortoise.webp', swatchUrl: '/swatches/tortoise.webp', sizes: this.generateSizes() },
           ]
         },
+/*
         {
           styleName: 'Savile Loafer Cordovan Bourbon',
           price: 0,
@@ -406,59 +493,6 @@ export class PoFormComponent implements OnInit {
           ]
         },
         {
-          styleName: 'Capri Loafer',
-          price: 162.50,
-          retailPrice: 325,
-          description: '',
-          variants: [
-            { id: 'new-capri-black', colorName: 'Capri Black', hexColor: '#1a1a1a', imageUrl: '/productos/new-capri/new-capri-black.webp', sizes: this.generateSizes() },
-            { id: 'new-capri-cognac', colorName: 'Capri Cognac', hexColor: '#3F372E', imageUrl: '/productos/new-capri/new-capri-cognac.webp', sizes: this.generateSizes()},
-          ]
-        },
-        {
-          styleName: 'Baja Loafer',
-          price: 150,
-          retailPrice: 300,
-          description: '',
-          variants: [
-            { id: 'new-baja-terra-suede', colorName: 'Terra Suede', hexColor: '#887152', imageUrl: '/productos/new-baja/new-baja-terra-suede.webp', sizes: this.generateSizes(), isSuede : true },
-            { id: 'new-baja-midnight-suede', colorName: 'Midnight Suede', hexColor: '#323B48', imageUrl: '/productos/new-baja/new-baja-midnight-suede.webp', sizes: this.generateSizes(), isSuede : true },
-            { id: 'new-baja-oyster-suede', colorName: 'Oyster Suede', hexColor: '#79460E', imageUrl: '/productos/new-baja/new-baja-oyster-suede.webp', sizes: this.generateSizes(), isSuede : true },
-          ]
-        },
-        {
-          styleName: 'Antibes Loafer',
-          price: 125,
-          retailPrice: 250,
-          description: '',
-          variants: [
-            { id: 'new-antibes-chesnut-suede', colorName: 'Chesnut Suede', hexColor: '#887152', imageUrl: '/productos/new-antibes/new-antibes-chesnut-suede.webp', sizes: this.generateSizes(), isSuede : true },
-            { id: 'new-antibes-stucco-velour', colorName: 'Stucco Velour', hexColor: '#B1AC8E', imageUrl: '/productos/new-antibes/new-antibes-stucco-velour.webp', sizes: this.generateSizes(), isSuede : true },
-            { id: 'new-antibes-slate-blue', colorName: 'Slate Blue Suede', hexColor: '#323B48', imageUrl: '/productos/new-antibes/new-antibes-slate-blue.webp', sizes: this.generateSizes(), isSuede : true },
-          ]
-        },
-        {
-          styleName: 'Ibiza Summer Loafer',
-          price: 112.50,
-          retailPrice: 225,
-          description: '',
-          variants: [
-            { id: 'new-ibiza-ivory-velour', colorName: 'Ivory Velour', hexColor: '#ECE9D6', imageUrl: '/productos/new-ibiza/new-ibiza-ivory.webp', sizes: this.generateSizes(), isSuede : true },
-            { id: 'new-ibiza-autum-gold', colorName: 'Autum Calf Gold', hexColor: '#6B4424', imageUrl: '/productos/new-ibiza/new-ibiza-autum-gold.webp', sizes: this.generateSizes(), isSuede : true },
-          ]
-        },
-        {
-          styleName: 'Edmund Plain Toe Boot',
-          price: 175,
-          retailPrice: 350,
-          description: '',
-          variants: [
-            { id: 'new-edmund-fawn-suede', colorName: 'Fawn Suede', hexColor: '#ECE9D6', imageUrl: '/productos/new-spring-edmund/new-edmund-fawn-suede.webp', sizes: this.generateSizes(), isSuede : true },
-            { id: 'new-edmund-repello-autum', colorName: 'Autum Calf Gold', hexColor: '#B2702B', imageUrl: '/productos/new-spring-edmund/new-edmund-repello-autum.webp', sizes: this.generateSizes(), isSuede : true },
-          ]
-        },
-/*
-        {
           styleName: 'Freeport Camp Moc Boot',
           price: 155,
           description: '',
@@ -467,7 +501,6 @@ export class PoFormComponent implements OnInit {
             { id: 'new-freeport-loden-suede', colorName: 'Loden Suede', hexColor: '#B2702B', imageUrl: '/productos/new-freeport/new-freeport-loden.webp', swatchUrl: '/swatches/loden.webp', sizes: this.generateSizes(), isSuede : true },
           ]
         },
-*/
         {
           styleName: 'Stresa Sneaker',
           price: 125,
@@ -478,39 +511,7 @@ export class PoFormComponent implements OnInit {
             { id: 'new-stresa-autum-gold', colorName: 'Autum Calf Gold', hexColor: '#B2702B', imageUrl: '/productos/new-stresa/new-stresa-autum-gold.webp', sizes: this.generateSizes(), isSuede : true },
           ]
         },
-        {
-          styleName: 'Amalfi Summer Venetian',
-          price: 112.50,
-          retailPrice: 225,
-          description: '',
-          variants: [
-            { id: 'new-amalfi-slate-blue', colorName: 'Slate Blue Suede', hexColor: '#1C3240', imageUrl: '/productos/new-ibiza/new-ibiza-slate-blue.webp', sizes: this.generateSizes(), isSuede : true },
-            { id: 'new-amalfi-chestnut', colorName: 'Chestnut Suede', hexColor: '#4D2E21', imageUrl: '/productos/new-ibiza/new-ibiza-chestnut-suede.webp', sizes: this.generateSizes(), isSuede : true },
-            { id: 'new-amalfi-asparagus', colorName: 'Asparagus', hexColor: '#5D5B31', imageUrl: '/productos/new-ibiza/new-ibiza-asparagus.webp', sizes: this.generateSizes(), isSuede : true },
-          ]
-        },
-        {
-          styleName: 'Ponza Venetian',
-          price: 162.50,
-          retailPrice: 325,
-          description: '',
-          variants: [
-            { id: 'new-ponza-stucco-velour', colorName: 'Stucco Velour', hexColor: '#BF9E4F', imageUrl: '/productos/new-ponza/new-ponza-stucco-velour.webp', sizes: this.generateSizes(), isSuede : true },
-            { id: 'new-ponza-espresso-leather', colorName: 'Espresso Leather', hexColor: '#301D11', imageUrl: '/productos/new-ponza/new-ponza-espresso.webp', sizes: this.generateSizes(), isSuede : true },
-            { id: 'new-ponza-noir-leather', colorName: 'Noir Leather', hexColor: '#1A1A1A', imageUrl: '/productos/new-ponza/new-ponza-noir-leather.webp', sizes: this.generateSizes() },
-            { id: 'new-ponza-ink-navy-suede', colorName: 'Ink Navy Suede', hexColor: '#323B48', imageUrl: '/productos/new-ponza/new-ponza-ink-navy-suede.webp', sizes: this.generateSizes(), isSuede : true},
-          ]
-        },
-        {
-          styleName: 'Duck Boot',
-          price: 175,
-          retailPrice: 350,
-          description: '',
-          variants: [
-            { id: 'new-duck-boot', colorName: 'Whiskey', hexColor: '#70554A', imageUrl: '/productos/new-duck-boot/new-duck-boot.webp', sizes: this.generateSizes(), swatchUrl: '/swatches/duckBoot.webp' },
-            { id: 'new-duck-boot', colorName: 'Eagle Cuoio', hexColor: '#70554A', imageUrl: '/productos/new-duck-boot/new-duck-boot.webp', sizes: this.generateSizes(), swatchUrl: '/swatches/duckBoot.webp' },
-          ]
-        },
+*/
       ]
     }
 
