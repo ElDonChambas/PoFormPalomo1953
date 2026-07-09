@@ -49,7 +49,7 @@ export class PoFormComponent implements OnInit {
 
   categories: ProductCategory[] = [
     {categoryName: 'Heartland Collection',
-      description: 'Our Premium & Handcrafted Collection',
+      description: 'Our Premium & Handcrafted Collection with world class materials.',
       isExpanded: false,
       activeView: 'list',
       styles: [
@@ -92,6 +92,16 @@ export class PoFormComponent implements OnInit {
             { id: 'gold-chelsea-cola', colorName: 'Cola', hexColor: '#6B4424', imageUrl: '/productos/gold-sherman/gold-chelsea-Cola.webp', sizes: this.generateSizes(), isSuede: true },
             { id: 'gold-chelsea-polo', colorName: 'Polo', hexColor: '#4D2E21', imageUrl: '/productos/gold-sherman/gold-chelsea-Polo.webp', sizes: this.generateSizes(), isSuede: true },
             { id: 'gold-chelsea-visone', colorName: 'Visone', hexColor: '#887152', imageUrl: '/productos/gold-sherman/gold-chelsea-visone.webp', sizes: this.generateSizes(), isSuede: true }
+          ]
+        },
+        {
+          styleName: 'Drake Leather Boot',
+          price: 175,
+          retailPrice: 350,
+          description: '',
+          variants: [
+            { id: 'new-duck-boot', colorName: 'Whiskey', hexColor: '#70554A', imageUrl: '/productos/new-duck-boot/new-duck-boot.webp', sizes: this.generateSizes(), swatchUrl: '/swatches/duckBoot.webp' },
+            { id: 'new-duck-boot', colorName: 'Eagle Cuoio', hexColor: '#70554A', imageUrl: '/productos/new-duck-boot/new-duck-boot.webp', sizes: this.generateSizes(), swatchUrl: '/swatches/duckBoot.webp' },
           ]
         },
         {
@@ -167,21 +177,12 @@ export class PoFormComponent implements OnInit {
             { id: 'gold-james-waxypullup', colorName: 'Cacao Waxy Pull-up', hexColor: '#4D3B37', imageUrl: '/productos/gold-james/gold-james-waxy.webp', sizes: this.generateSizes() },
           ]
         },
-        {
-          styleName: 'Drake Leather Boot',
-          price: 175,
-          retailPrice: 350,
-          description: '',
-          variants: [
-            { id: 'new-duck-boot', colorName: 'Whiskey', hexColor: '#70554A', imageUrl: '/productos/new-duck-boot/new-duck-boot.webp', sizes: this.generateSizes(), swatchUrl: '/swatches/duckBoot.webp' },
-            { id: 'new-duck-boot', colorName: 'Eagle Cuoio', hexColor: '#70554A', imageUrl: '/productos/new-duck-boot/new-duck-boot.webp', sizes: this.generateSizes(), swatchUrl: '/swatches/duckBoot.webp' },
-          ]
-        },
+        
       ]
     },
 
     {categoryName: 'Core Collection',
-      description: 'Everyday Classic Essentials',
+      description: 'Everyday Essentials with regional materials.',
       isExpanded: false,
       activeView: 'list',
       styles: [
@@ -267,7 +268,7 @@ export class PoFormComponent implements OnInit {
           ]
         },
         {
-          styleName: 'Savile Loafer',
+          styleName: 'PALOMO® Loafer Classic',
           price: 100,
           retailPrice: 200,
           description: '',
@@ -284,18 +285,9 @@ export class PoFormComponent implements OnInit {
           variants: [
             { id: 'gold-columbus-blue', colorName: 'Deep Blue Grain', hexColor: '#403B5B', imageUrl: '/productos/gold-columbus/gold-columbus-blue.webp', sizes: this.generateSizes() },
             { id: 'gold-columbus-natural', colorName: 'Natural', hexColor: '#A1866B', imageUrl: '/productos/gold-columbus/gold-columbus-natural.webp', sizes: this.generateSizes() },
-          ]
-        },
-        {
-          styleName: 'Columbus Boat Shoe Hunter Green',
-          description: '• Genuine Suede • Full Tubular Boat Shoe • Handsewn with Waxed Handsewn Thread • Full Leather Lining',
-          price: 82.50,
-          retailPrice: 165,
-          variants: [
             { id: 'gold-columbus-green', colorName: 'Hunter Green', hexColor: '#5D5B31', imageUrl: '/productos/gold-columbus/gold-columbus-green.webp', sizes: this.generateSizes(), isSuede: true },
           ]
-        },
-/*
+        },/*
         {
           styleName: 'Lola Loafer Woman',
           price: 90,
