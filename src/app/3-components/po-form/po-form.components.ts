@@ -445,8 +445,8 @@ export class PoFormComponent implements OnInit {
           retailPrice: 350,
           description: '',
           variants: [
-            { id: 'new-ernest-fawn-suede', colorName: 'Fawn Suede', hexColor: '#ECE9D6', imageUrl: '/productos/new-spring-edmund/new-edmund-fawn-suede.webp', sizes: this.generateSizes(), isSuede : true },
-          ] //FOTO INCORRECTA PARA MIENTRAS
+            { id: 'new-ernest-fawn-suede', colorName: 'Fawn Suede', hexColor: '#ECE9D6', imageUrl: '/productos/new-ernest/new-ernest-fawn-suede.webp', sizes: this.generateSizes(), isSuede : true },
+          ]
         },
         {
           styleName: 'Edmund Plain Toe Boot',
