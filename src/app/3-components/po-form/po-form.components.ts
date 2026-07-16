@@ -358,7 +358,9 @@ export class PoFormComponent implements OnInit {
           variants: [
             { id: 'new-antibes-chesnut-suede', colorName: 'Chesnut Suede', hexColor: '#887152', imageUrl: '/productos/new-antibes/new-antibes-chesnut-suede.webp', sizes: this.generateSizes(), isSuede : true },
             { id: 'new-antibes-stucco-velour', colorName: 'Stucco Velour', hexColor: '#B1AC8E', imageUrl: '/productos/new-antibes/new-antibes-stucco-velour.webp', sizes: this.generateSizes(), isSuede : true },
+            /*
             { id: 'new-antibes-slate-blue', colorName: 'Slate Blue Suede', hexColor: '#323B48', imageUrl: '/productos/new-antibes/new-antibes-slate-blue.webp', sizes: this.generateSizes(), isSuede : true },
+            */
           ]
         },
         {
@@ -367,6 +369,7 @@ export class PoFormComponent implements OnInit {
           retailPrice: 225,
           description: '',
           variants: [
+            { id: 'new-mallorca-slate-blue', colorName: 'Slate Blue Suede', hexColor: '#323B48', imageUrl: '/productos/new-ibiza/new-ibiza-slate-blue.webp', sizes: this.generateSizes(), isSuede : true },
             { id: 'new-mallorca-ivory-velour', colorName: 'Ivory Velour', hexColor: '#ECE9D6', imageUrl: '/productos/new-ibiza/new-ibiza-ivory.webp', sizes: this.generateSizes(), isSuede : true },
             { id: 'new-mallorca-autum-gold', colorName: 'Autum Calf Gold', hexColor: '#6B4424', imageUrl: '/productos/new-ibiza/new-ibiza-autum-gold.webp', sizes: this.generateSizes(), isSuede : true },
           ]
@@ -377,7 +380,9 @@ export class PoFormComponent implements OnInit {
           retailPrice: 225,
           description: '',
           variants: [
+            /*
             { id: 'new-amalfi-slate-blue', colorName: 'Slate Blue Suede', hexColor: '#1C3240', imageUrl: '/productos/new-ibiza/new-ibiza-slate-blue.webp', sizes: this.generateSizes(), isSuede : true },
+            */
             { id: 'new-amalfi-chestnut', colorName: 'Chestnut Suede', hexColor: '#4D2E21', imageUrl: '/productos/new-ibiza/new-ibiza-chestnut-suede.webp', sizes: this.generateSizes(), isSuede : true },
             { id: 'new-amalfi-asparagus', colorName: 'Asparagus', hexColor: '#5D5B31', imageUrl: '/productos/new-ibiza/new-ibiza-asparagus.webp', sizes: this.generateSizes(), isSuede : true },
           ]
