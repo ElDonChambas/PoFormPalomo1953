@@ -208,6 +208,7 @@ export class PoFormComponent implements OnInit {
             { id: 'green-ernest-natural', colorName: 'Natural Waxy Leather', hexColor: '#A1866B', imageUrl: '/productos/green-ernest/green-ernest-natural.webp', sizes: this.generateSizes() },
             { id: 'green-ernest-lava-stone', colorName: 'Lava Stone', hexColor: '#343734', imageUrl: '/productos/green-ernest/green-ernest-lava-stone.webp', sizes: this.generateSizes() },
             { id: 'green-ernest-cinder', colorName: 'Cinder Brown Waxy Suede', hexColor: '#6E5F41', imageUrl: '/productos/green-ernest/green-ernest-cinder-brown.webp', sizes: this.generateSizes(), isSuede: true },
+            { id: 'green-ernest-crazy', colorName: 'Crazy Horse Dark Roast', hexColor: '#5C4033', imageUrl: '/productos/green-ernest/green-ernest-crazy.webp', sizes: this.generateSizes(), isSuede: true },
           ]
         },
         {
@@ -221,6 +222,7 @@ export class PoFormComponent implements OnInit {
             { id: 'green-sherman-natural', colorName: 'Natural Waxy Leather', hexColor: '#A1866B', imageUrl: '/productos/green-sherman/green-sherman-natural.webp', sizes: this.generateSizes() },
             { id: 'green-sherman-cinder', colorName: 'Cinder Brown Waxy Suede', hexColor: '#6E5F41', imageUrl: '/productos/green-sherman/green-sherman-cinder-brown.webp', sizes: this.generateSizes(), isSuede : true },
             { id: 'green-sherman-mesa', colorName: 'Mesa Suede', hexColor: '#866D37', imageUrl: '/productos/green-sherman/green-sherman-mesa.webp', sizes: this.generateSizes(), isSuede : true },
+            { id: 'green-sherman-crazy', colorName: 'Crazy Horse Light Roast', hexColor: '#C39C56', imageUrl: '/productos/green-sherman/green-sherman-crazy.webp', sizes: this.generateSizes()},
           ]
         },
         {
