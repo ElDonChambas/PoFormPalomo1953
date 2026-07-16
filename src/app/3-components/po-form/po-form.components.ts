@@ -462,7 +462,7 @@ export class PoFormComponent implements OnInit {
           ]
         },
         {
-          styleName: 'Tahoe Hiker Boot',
+          styleName: 'Kalahari Hiker Boot',
           price: 175,
           retailPrice: 350,
           description: '',
@@ -484,15 +484,26 @@ export class PoFormComponent implements OnInit {
             { id: 'new-savile-cordovan-bourbon', colorName: 'Cordovan Bourbon', hexColor: '#3A2411', imageUrl: '/productos/new-savile/new-savile-cordovan.webp', sizes: this.generateSizes() },
           ]
         },
+*/
         {
-          styleName: 'Freeport Camp Moc Boot',
-          price: 155,
+          styleName: 'Aparahoe Mocc Boot',
+          price: 190,
+          retailPrice: 390,
           description: '',
           variants: [
-            { id: 'new-freeport-suede-saddle', colorName: 'Suede Saddle', hexColor: '#6B4424', imageUrl: '/productos/new-freeport/new-freeport-saddle.webp', swatchUrl: '/swatches/saddle.webp', sizes: this.generateSizes(), isSuede : true },
-            { id: 'new-freeport-loden-suede', colorName: 'Loden Suede', hexColor: '#B2702B', imageUrl: '/productos/new-freeport/new-freeport-loden.webp', swatchUrl: '/swatches/loden.webp', sizes: this.generateSizes(), isSuede : true },
+            { id: 'new-freeport-loden-suede', colorName: 'Camel & Tan', hexColor: '#B2702B', imageUrl: '/productos/new-freeport/new-freeport-loden.webp', swatchUrl: '/swatches/loden.webp', sizes: this.generateSizes(), isSuede : true },
           ]
         },
+        {
+          styleName: 'Dakota Chukka Boot',
+          price: 162.50,
+          retailPrice: 325,
+          description: '',
+          variants: [
+            { id: 'new-freeport-suede-saddle', colorName: 'Camel & Tan', hexColor: '#6B4424', imageUrl: '/productos/new-freeport/new-freeport-saddle.webp', swatchUrl: '/swatches/saddle.webp', sizes: this.generateSizes(), isSuede : true },
+          ]
+        },
+/*
         {
           styleName: 'Stresa Sneaker',
           price: 125,
