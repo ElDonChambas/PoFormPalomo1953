@@ -375,7 +375,7 @@ export class PoFormComponent implements OnInit {
           ]
         },
         {
-          styleName: 'Menorca Summer Penny Loafer',
+          styleName: 'Menorca Summer Loafer',
           price: 112.50,
           retailPrice: 225,
           description: '',
@@ -394,9 +394,17 @@ export class PoFormComponent implements OnInit {
           description: '',
           variants: [
             { id: 'new-ponza-stucco-velour', colorName: 'Stucco Velour', hexColor: '#BF9E4F', imageUrl: '/productos/new-ponza/new-ponza-stucco-velour.webp', sizes: this.generateSizes(), isSuede : true },
-            { id: 'new-ponza-espresso-leather', colorName: 'Espresso Leather', hexColor: '#301D11', imageUrl: '/productos/new-ponza/new-ponza-espresso.webp', sizes: this.generateSizes(), isSuede : true },
             { id: 'new-ponza-noir-leather', colorName: 'Noir Leather', hexColor: '#1A1A1A', imageUrl: '/productos/new-ponza/new-ponza-noir-leather.webp', sizes: this.generateSizes() },
             { id: 'new-ponza-ink-navy-suede', colorName: 'Ink Navy Suede', hexColor: '#323B48', imageUrl: '/productos/new-ponza/new-ponza-ink-navy-suede.webp', sizes: this.generateSizes(), isSuede : true},
+          ]
+        },
+        {
+          styleName: 'Ponza Loafer',
+          price: 162.50,
+          retailPrice: 325,
+          description: '',
+          variants: [
+            { id: 'new-ponza-espresso-leather', colorName: 'Espresso Leather', hexColor: '#301D11', imageUrl: '/productos/new-ponza/new-ponza-espresso.webp', sizes: this.generateSizes(), isSuede : true },
           ]
         },
         {
@@ -445,6 +453,8 @@ export class PoFormComponent implements OnInit {
           description: '',
           variants: [
             { id: 'new-ernest-fawn-suede', colorName: 'Fawn Suede', hexColor: '#ECE9D6', imageUrl: '/productos/new-ernest/new-ernest-fawn-suede.webp', sizes: this.generateSizes(), isSuede : true },
+            { id: 'new-ernest-calf-gold', colorName: 'Autumn Calf Gold', hexColor: '#B2702B', imageUrl: '/productos/new-ernest/new-ernest-calf-gold.webp', sizes: this.generateSizes(), isSuede : true },
+            { id: 'new-ernest-waxy-hickori', colorName: 'Waxy Hickori', hexColor: '#4D3B37', imageUrl: '/productos/new-ernest/new-ernest-waxy-hickori.webp', sizes: this.generateSizes(), isSuede : true },
           ]
         },
         {
