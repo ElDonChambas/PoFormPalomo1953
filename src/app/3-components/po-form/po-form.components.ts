@@ -206,7 +206,6 @@ export class PoFormComponent implements OnInit {
             { id: 'green-ernest-black', colorName: 'Black Waxy Leather', hexColor: '#1a1a1a', imageUrl: '/productos/green-ernest/green-ernest-black.webp', sizes: this.generateSizes() },
             { id: 'green-ernest-brown', colorName: 'Brown Waxy Leather', hexColor: '#5C4033', imageUrl: '/productos/green-ernest/green-ernest-brown.webp', sizes: this.generateSizes() },
             { id: 'green-ernest-natural', colorName: 'Natural Waxy Leather', hexColor: '#A1866B', imageUrl: '/productos/green-ernest/green-ernest-natural.webp', sizes: this.generateSizes() },
-            { id: 'green-ernest-lava-stone', colorName: 'Lava Stone', hexColor: '#343734', imageUrl: '/productos/green-ernest/green-ernest-lava-stone.webp', sizes: this.generateSizes() },
             { id: 'green-ernest-cinder', colorName: 'Cinder Brown Waxy Suede', hexColor: '#6E5F41', imageUrl: '/productos/green-ernest/green-ernest-cinder-brown.webp', sizes: this.generateSizes(), isSuede: true },
             { id: 'green-ernest-crazy', colorName: 'Crazy Horse Dark Roast', hexColor: '#5C4033', imageUrl: '/productos/green-ernest/green-ernest-crazy.webp', sizes: this.generateSizes(), isSuede: true },
           ]
@@ -266,7 +265,8 @@ export class PoFormComponent implements OnInit {
             { id: 'green-penny-brown', colorName: 'Brown Moc', hexColor: '#5C4033', imageUrl: '/productos/green-penny/green-penny-brown.webp', sizes: this.generateSizes() },
             { id: 'green-penny-burgundy', colorName: 'Burgundy Moc', hexColor: '#3A2411', imageUrl: '/productos/green-penny/green-penny-burgundy.webp', sizes: this.generateSizes() },
             { id: 'green-penny-sandstone', colorName: 'Sandstone Waxy Leather', hexColor: '#95591A', imageUrl: '/productos/green-penny/green-penny-sandstone.webp', sizes: this.generateSizes()},
-            { id: 'green-penny-mesa', colorName: 'Mesa Suede', hexColor: '#866D37', imageUrl: '/productos/green-penny/green-penny-mesa.webp', sizes: this.generateSizes(), isSuede : true },
+            { id: 'green-penny-mesa', colorName: 'Mesa Suede', hexColor: '#866D37', imageUrl: '/productos/green-penny/green-penny-mesa.webp', sizes: this.generateSizes(), isSuede: true },
+            { id: 'green-penny-blue', colorName: 'Slate Blue Suede', hexColor: '#323B48', imageUrl: '/productos/green-penny/green-penny-blue.webp', sizes: this.generateSizes(), isSuede : true },
           ]
         },
         {
@@ -479,7 +479,7 @@ export class PoFormComponent implements OnInit {
           ]
         },
         {
-          styleName: 'Kalahari Hiker Boot',
+          styleName: 'Kalahari Hiker Shoe',
           price: 175,
           retailPrice: 350,
           description: '',
